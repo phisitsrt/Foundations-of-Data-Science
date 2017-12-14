@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<title>SANKEY Experiment</title>
+<style>
+    .node rect {
+        cursor: move;
+        fill-opacity: .9;
+        shape-rendering: crispEdges;
+    }
+
+    .node text {
+        pointer-events: none;
+        text-shadow: 0 1px 0 #fff;
+    }
+
+    .link {
+        fill: none;
+        stroke: #000;
+        stroke-opacity: .2;
+    }
+
+        .link:hover {
+            stroke-opacity: .5;
+        }
+</style>
+<body>
+
+    <p id="chart">
+
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="sankey.js"></script>
+        <script>
+
+            var units = "Widgets";
+
+            var margin = { top: 10, right: 10, bottom: 10, left: 10 },
+                width = 700 - margin.left - margin.right,
+                height = 300 - margin.top - margin.bottom;
+
+            var formatNumber = d3.format(",.0f"),    // zero decimal places
+                format = function (d) { return formatNumber(d) + " " + units; },
+                color = d3.scale.category20();
+
+            // append the svg canvas to the page
+            var svg = d3.select("#chart").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")");
+
+            // Set the sankey diagram properties
+            var sankey = d3.sankey()
+                .nodeWidth(36)
+                .nodePadding(40)
+                .size([width, height]);
+
+            var path = sankey.link();
+
+            // load the data (using the timelyportfolio csv method)
+            d3.csv("data/countries_clusters_data_01_C_01.csv", function (error, data) {
+                console.log(data);
+                // prepare data
+                var temp = { "nodes": [], "links": [] };
+
+                var transitionCount = new Array(16).fill(0);;
+                data.forEach(function (d) {
+                    if (d.Transition_Types == "AA") {
+                        transitionCount[0] = transitionCount[0] + 1;
+                    }
+                    else if (d.Transition_Types == "AB") {
+                        transitionCount[1] = transitionCount[1] + 1;
+                    }
+                    else if (d.Transition_Types == "AC") {
+                        transitionCount[2] = transitionCount[2] + 1;
+                    }
+                    else if (d.Transition_Types == "AD") {
+                        transitionCount[3] = transitionCount[3] + 1;
+                    }
+                    else if (d.Transition_Types == "BA") {
+                        transitionCount[4] = transitionCount[4] + 1;
+                    }
+                    else if (d.Transition_Types == "BB") {
+                        transitionCount[5] = transitionCount[5] + 1;
+                    }
+                    else if (d.Transition_Types == "BC") {
+                        transitionCount[6] = transitionCount[6] + 1;
+                    }
+                    else if (d.Transition_Types == "BD") {
+                        transitionCount[7] = transitionCount[7] + 1;
+                    }
+                    else if (d.Transition_Types == "CA") {
+                        transitionCount[8] = transitionCount[8] + 1;
+                    }
+                    else if (d.Transition_Types == "CB") {
+                        transitionCount[9] = transitionCount[9] + 1;
+                    }
+                    else if (d.Transition_Types == "CC") {
+                        transitionCount[10] = transitionCount[10] + 1;
+                    }
+                    else if (d.Transition_Types == "CD") {
+                        transitionCount[11] = transitionCount[11] + 1;
+                    }
+                    else if (d.Transition_Types == "DA") {
+                        transitionCount[12] = transitionCount[12] + 1;
+                    }
+                    else if (d.Transition_Types == "DB") {
+                        transitionCount[13] = transitionCount[13] + 1;
+                    }
+                    else if (d.Transition_Types == "DC") {
+                        transitionCount[14] = transitionCount[14] + 1;
+                    }
+                    else if (d.Transition_Types == "DD") {
+                        transitionCount[15] = transitionCount[15] + 1;
+                    }
+                });
+                var links = [{ "source": "A90", "target": "A15", "value": transitionCount[0] },
+                { "source": "A90", "target": "B15", "value": transitionCount[1] },
+                { "source": "A90", "target": "C15", "value": transitionCount[2] },
+                { "source": "A90", "target": "D15", "value": transitionCount[3] },
+                { "source": "B90", "target": "A15", "value": transitionCount[4] },
+                { "source": "B90", "target": "B15", "value": transitionCount[5] },
+                { "source": "B90", "target": "C15", "value": transitionCount[6] },
+                { "source": "B90", "target": "D15", "value": transitionCount[7] },
+                { "source": "C90", "target": "A15", "value": transitionCount[8] },
+                { "source": "C90", "target": "B15", "value": transitionCount[9] },
+                { "source": "C90", "target": "C15", "value": transitionCount[10] },
+                { "source": "C90", "target": "D15", "value": transitionCount[11] },
+                { "source": "D90", "target": "A15", "value": transitionCount[12] },
+                { "source": "D90", "target": "B15", "value": transitionCount[13] },
+                { "source": "D90", "target": "C15", "value": transitionCount[14] },
+                { "source": "D90", "target": "D15", "value": transitionCount[15] }];
+
+                var source = [{ "name": "A90" }, { "name": "B90" }, { "name": "C90" }, { "name": "D90" }];
+                var target = [{ "name": "A15" }, { "name": "B15" }, { "name": "C15" }, { "name": "D15" }];
+                var nodes = source.concat(target);
+                nodes.forEach(function (d) {
+                    temp.nodes.push(d);
+                });
+                links.forEach(function (d) {
+                    temp.links.push(d);
+                });
+
+                console.log(temp);
+
+                //set up graph in same style as original example but empty
+                /*graph = { "nodes": [], "links": [] };
+
+                data.forEach(function (d) {
+                    graph.nodes.push({ "name": d.source });
+                    graph.nodes.push({ "name": d.target });
+                    graph.links.push({
+                        "source": d.source,
+                        "target": d.target,
+                        "value": +d.value
+                    });
+                });
+
+                console.log(graph);*/
+                graph = temp;
+
+                // return only the distinct / unique nodes
+                graph.nodes = d3.keys(d3.nest()
+                    .key(function (d) { return d.name; })
+                    .map(graph.nodes));
+
+                // loop through each link replacing the text with its index from node
+                graph.links.forEach(function (d, i) {
+                    graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+                    graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+                });
+
+                //now loop through each nodes to make nodes an array of objects
+                // rather than an array of strings
+                graph.nodes.forEach(function (d, i) {
+                    graph.nodes[i] = { "name": d };
+                });
+
+                sankey
+                    .nodes(graph.nodes)
+                    .links(graph.links)
+                    .layout(32);
+
+                // add in the links
+                var link = svg.append("g").selectAll(".link")
+                    .data(graph.links)
+                    .enter().append("path")
+                    .attr("class", "link")
+                    .attr("d", path)
+                    .style("stroke-width", function (d) { return Math.max(1, d.dy); })
+                    .style("stroke", function (d) {
+                        return d.color = "#ff0000";
+                    })
+                    .sort(function (a, b) { return b.dy - a.dy; });
+
+                // add the link titles
+                link.append("title")
+                    .text(function (d) {
+                        return d.source.name + " → " +
+                            d.target.name + "\n" + format(d.value);
+                    });
+
+                // add in the nodes
+                var node = svg.append("g").selectAll(".node")
+                    .data(graph.nodes)
+                    .enter().append("g")
+                    .attr("class", "node")
+                    .attr("transform", function (d) {
+                        return "translate(" + d.x + "," + d.y + ")";
+                    })
+                    .call(d3.behavior.drag()
+                        .origin(function (d) { return d; })
+                        .on("dragstart", function () {
+                            this.parentNode.appendChild(this);
+                        })
+                        .on("drag", dragmove));
+
+                // add the rectangles for the nodes
+                node.append("rect")
+                    .attr("height", function (d) { return d.dy; })
+                    .attr("width", sankey.nodeWidth())
+                    .style("fill", function (d) {
+                        var nodeColor = "#000066";
+                        if (d.name[0] == "B") {
+                            nodeColor = "#003cb3";
+                        }
+                        else if (d.name[0] == "C") {
+                            nodeColor = "#6666ff";
+                        }
+                        else if (d.name[0] == "D") {
+                            nodeColor = "#b3b3ff";
+                        }
+                        return d.color = nodeColor;
+                        //return d.color = color(d.name.replace(/ .*/, ""));
+                    })
+                    .style("stroke", function (d) {
+                        return d3.rgb(d.color).darker(2);
+                    })
+                    .append("title")
+                    .text(function (d) {
+                        return d.name + "\n" + format(d.value);
+                    });
+
+                // add in the title for the nodes
+                node.append("text")
+                    .attr("x", -6)
+                    .attr("y", function (d) { return d.dy / 2; })
+                    .attr("dy", ".35em")
+                    .attr("text-anchor", "end")
+                    .attr("transform", null)
+                    .text(function (d) { return d.name; })
+                    .filter(function (d) { return d.x < width / 2; })
+                    .attr("x", 6 + sankey.nodeWidth())
+                    .attr("text-anchor", "start");
+
+                // the function for moving the nodes
+                function dragmove(d) {
+                    d3.select(this).attr("transform",
+                        "translate(" + d.x + "," + (
+                            d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+                        ) + ")");
+                    sankey.relayout();
+                    link.attr("d", path);
+                }
+            });
+
+        </script>
+
+</body>
+</html>

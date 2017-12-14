@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <!-- I recommend you host this file on your own, since this will change without warning -->
+    <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div id="container1" style="position: relative; width: 70%; max-height: 450px;"></div>
+
+
+    <script>
+        var CSVdata = null;
+        //basic map config with custom fills, mercator projection
+        var map = new Datamap({
+            scope: 'world',
+            element: document.getElementById('container1'),
+            projection: 'mercator',
+            height: 740,
+            fills: {
+                defaultFill: 'white',
+            },
+
+            data: {
+                /*USA: { fillKey: 'lt50' },
+                RUS: { fillKey: 'lt50' },
+                CAN: { fillKey: 'lt50' },
+                BRA: { fillKey: 'gt50' },
+                ARG: { fillKey: 'gt50' },
+                COL: { fillKey: 'gt50' },
+                AUS: { fillKey: 'gt50' },
+                ZAF: { fillKey: 'gt50' },
+                MAD: { fillKey: 'gt50' },
+                THA: { fillKey: 'lt30' }*/
+            },
+            geographyConfig: {
+                dataUrl: null, // If not null, datamaps will fetch the map JSON (currently only supports topojson)
+                hideAntarctica: true,
+                hideHawaiiAndAlaska: false,
+                borderWidth: 2,
+                borderOpacity: 1,
+                borderColor: 'black',
+                popupTemplate: function (geography, data) { // This function should just return a string
+                    return '&lt;div class="hoverinfo"&gt;&lt;strong&gt;' + geography.properties.name + '&lt;/strong&gt;&lt;/div&gt;';
+                },
+                popupOnHover: false, // True to show the popup while hovering
+                highlightOnHover: true,
+                highlightFillColor: '#999999',
+                highlightBorderColor: 'black',
+                highlightBorderWidth: 2,
+                highlightBorderOpacity: 1
+            },
+        })
+
+
+        //sample of the arc plugin
+        /*map.arc([
+            {
+                origin: {
+                    latitude: 40.639722,
+                    longitude: 73.778889
+                },
+                destination: {
+                    latitude: 37.618889,
+                    longitude: -122.375
+                }
+            },
+            {
+                origin: {
+                    latitude: 30.194444,
+                    longitude: -97.67
+                },
+                destination: {
+                    latitude: 25.793333,
+                    longitude: -0.290556
+                }
+            }
+        ], { strokeWidth: 2 });*/
+
+
+        //bubbles, custom popup on hover template
+        /*map.bubbles([
+            { name: 'Hot', latitude: 21.32, longitude: 5.32, radius: 10, fillKey: 'gt50' },
+            { name: 'Chilly', latitude: -25.32, longitude: 120.32, radius: 18, fillKey: 'lt50' },
+            { name: 'Hot again', latitude: 21.32, longitude: -84.32, radius: 8, fillKey: 'gt50' },
+
+        ], {
+                popupTemplate: function (geo, data) {
+                    return "<div class='hoverinfo'>It is " + data.name + "</div>";
+                }
+            });*/
+
+        $(document).ready(function () {
+            $("#indicator1").click(function () {
+                var data = {};
+                var color = "#00004d";
+                var max = 0;
+
+                CSVdata.forEach(function (d) {
+                    if (d["Average of Population, total"] > max) {
+                        max = d["Average of Population, total"];
+                    }
+                })
+                
+                /*for (var country in map.options.data) {
+                    data[country] = color;
+                }*/
+                CSVdata.forEach(function (d) {
+                    var country = d["Country code"];
+                    if (d["Average of Population, total"] / max > 0.8) {
+                        data[country] = "#00004d";
+                    }
+                    else if (d["Average of Population, total"] / max > 0.6) {
+                        data[country] = "#0000cc";
+                    }
+                    else if (d["Average of Population, total"] / max > 0.4) {
+                        data[country] = "#3333ff";
+                    }
+                    else if (d["Average of Population, total"] / max > 0.2) {
+                        data[country] = "#8080ff";
+                    }
+                    else {
+                        data[country] = "#ccccff";
+                    }
+                })
+                map.updateChoropleth(data);
+            })
+
+            $("#indicator2").click(function () {
+                var data = {};
+                var color = "black";
+
+                CSVdata.forEach(function (d) {
+                    var country = d["Country code"];
+                    if (d["unemployment rate"] > 20) {
+                        data[country] = "#00004d";
+                    }
+                    else if (d["unemployment rate"] > 15) {
+                        data[country] = "#0000cc";
+                    }
+                    else if (d["unemployment rate"] > 10) {
+                        data[country] = "#3333ff";
+                    }
+                    else if (d["unemployment rate"] > 5) {
+                        data[country] = "#8080ff";
+                    }
+                    else {
+                        data[country] = "#ccccff";
+                    }
+                })
+                map.updateChoropleth(data);
+            })
+
+            $("#indicator3").click(function () {
+                var data = {};
+                var color = "black";
+
+                CSVdata.forEach(function (d) {
+                    var country = d["Country code"];
+                    if (d["Average of Individuals using the Internet (% of population)"] > 50) {
+                        data[country] = "#00004d";
+                    }
+                    else if (d["Average of Individuals using the Internet (% of population)"] > 35) {
+                        data[country] = "#0000cc";
+                    }
+                    else if (d["Average of Individuals using the Internet (% of population)"] > 20) {
+                        data[country] = "#3333ff";
+                    }
+                    else if (d["Average of Individuals using the Internet (% of population)"] > 5) {
+                        data[country] = "#8080ff";
+                    }
+                    else {
+                        data[country] = "#ccccff";
+                    }
+                })
+                map.updateChoropleth(data);
+            })
+        })
+
+        d3.csv("data/data_prep_D_C_02.csv", function (error, data) {
+            CSVdata = data;
+        });
+
+    </script>
+
+    <form action="" style="position: fixed; right: 50px; top: 50px;">
+        <input type="radio" id="indicator1" name="indicator" value="indicator1"> Average of Population, total<br>
+        <input type="radio" id="indicator2" name="indicator" value="indicator2"> Unemployment rate<br>
+        <input type="radio" id="indicator3" name="indicator" value="indicator3"> Average of Individuals using the Internet (% of population)
+    </form>
+</body>
