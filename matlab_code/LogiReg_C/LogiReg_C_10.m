@@ -27,7 +27,7 @@ pre_indicator_data = imported_data.data.data(:,12:imcol);
 % indicator_name = pre_indicator_name;
 % indicator_data = pre_indicator_data;
 
-chs = [ 1:6 8 9 11 14:16 19:53 ];
+chs = [ 2:6 8 9 11 14:16 19:53 ];
 indicator_name = pre_indicator_name(:,[1 chs-1]);
 indicator_data = pre_indicator_data(:,chs-1);
 
