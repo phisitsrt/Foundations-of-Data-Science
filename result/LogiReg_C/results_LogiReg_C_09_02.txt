@@ -1,0 +1,392 @@
+>> LogiReg_C_09
+file name: 
+data/data_Prep_D_C.xlsx
+For group:
+     1
+
+    'AA'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  964.1041
+
+Relevant variables - This high, higher probability
+     2
+
+    'agriculture add(%gdp)'
+
+    '2'    'agriculture add(%…'    '-8467.8724'
+
+Relevant variables - This low, higher probability
+     5
+     7
+
+    'population'
+    'Agriculture, value added (% of GDP)'
+
+    '5'    'population'    '991.7779'
+
+    '7'    'Agriculture, valu…'    '8506.9248'
+
+----------------
+For group:
+     2
+
+    'AB'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_09 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   3.5037e+03
+
+Relevant variables - This high, higher probability
+     2
+    13
+
+    'agriculture add(%gdp)'
+    'Population, total'
+
+    '2'    'agriculture add(%…'    '-15647.955'
+
+    '13'    'Population, total'    '-3511.4886'
+
+Relevant variables - This low, higher probability
+     7
+
+    'Agriculture, value added (% of GDP)'
+
+    '7'    'Agriculture, valu…'    '15802.7411'
+
+----------------
+For group:
+     3
+
+    'BA'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   1.2040e+03
+
+Relevant variables - This high, higher probability
+     5
+     7
+
+    'population'
+    'Agriculture, value added (% of GDP)'
+
+    '5'    'population'    '-1217.2992'
+
+    '7'    'Agriculture, valu…'    '-3178.6048'
+
+Relevant variables - This low, higher probability
+     2
+
+    'agriculture add(%gdp)'
+
+    '2'    'agriculture add(%…'    '3323.725'
+
+----------------
+For group:
+     4
+
+    'BB'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_09 (line 59) 
+Count Error: 
+    18
+
+Coefficient Threshold: 
+   1.0797e+03
+
+Relevant variables - This high, higher probability
+     2
+    10
+
+    'agriculture add(%gdp)'
+    'Industry, value added (% of GDP)'
+
+    '2'    'agriculture add(%…'    '-18006.1837'
+
+    '10'    'Industry, value a…'    '-1080.533'
+
+Relevant variables - This low, higher probability
+     7
+
+    'Agriculture, value added (% of GDP)'
+
+    '7'    'Agriculture, valu…'    '18022.396'
+
+----------------
+For group:
+     5
+
+    'BC'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_09 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   1.2122e+03
+
+Relevant variables - This high, higher probability
+     7
+
+    'Agriculture, value added (% of GDP)'
+
+    '7'    'Agriculture, valu…'    '-8021.4122'
+
+Relevant variables - This low, higher probability
+     1
+     2
+    20
+
+    'intercept'
+    'agriculture add(%gdp)'
+    'Air transport, freight (million ton-km)'
+
+    '1'    'intercept'    '1270.6262'
+
+    '2'    'agriculture add(%…'    '8015.8163'
+
+    '20'    'Air transport, fr…'    '1282.849'
+
+----------------
+For group:
+     6
+
+    'CB'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_09 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   1.3995e+03
+
+Relevant variables - This high, higher probability
+     2
+
+    'agriculture add(%gdp)'
+
+    '2'    'agriculture add(%…'    '-4029.3016'
+
+Relevant variables - This low, higher probability
+     7
+    13
+
+    'Agriculture, value added (% of GDP)'
+    'Population, total'
+
+    '7'    'Agriculture, valu…'    '4092.994'
+
+    '13'    'Population, total'    '1419.5042'
+
+----------------
+For group:
+     7
+
+    'CC'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_09 (line 59) 
+Count Error: 
+     9
+
+Coefficient Threshold: 
+  698.7668
+
+Relevant variables - This high, higher probability
+     2
+    10
+
+    'agriculture add(%gdp)'
+    'Industry, value added (% of GDP)'
+
+    '2'    'agriculture add(%…'    '-11170.4424'
+
+    '10'    'Industry, value a…'    '-699.7321'
+
+Relevant variables - This low, higher probability
+     7
+
+    'Agriculture, value added (% of GDP)'
+
+    '7'    'Agriculture, valu…'    '11174.9366'
+
+----------------
+For group:
+     8
+
+    'CD'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_09 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   4.7844e+03
+
+Relevant variables - This high, higher probability
+     2
+
+    'agriculture add(%gdp)'
+
+    '2'    'agriculture add(%…'    '-54888.0492'
+
+Relevant variables - This low, higher probability
+     7
+    32
+
+    'Agriculture, value added (% of GDP)'
+    'Imports of goods and services (annual % growth)'
+
+    '7'    'Agriculture, valu…'    '55226.2711'
+
+    '32'    'Imports of goods …'    '4889.9221'
+
+----------------
+For group:
+     9
+
+    'DB'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  333.3286
+
+Relevant variables - This high, higher probability
+     7
+
+    'Agriculture, value added (% of GDP)'
+
+    '7'    'Agriculture, valu…'    '-1122.1118'
+
+Relevant variables - This low, higher probability
+     2
+     5
+
+    'agriculture add(%gdp)'
+    'population'
+
+    '2'    'agriculture add(%…'    '1136.238'
+
+    '5'    'population'    '335.5792'
+
+----------------
+For group:
+    10
+
+    'DC'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_09 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   2.2723e+03
+
+Relevant variables - This high, higher probability
+     2
+    10
+
+    'agriculture add(%gdp)'
+    'Industry, value added (% of GDP)'
+
+    '2'    'agriculture add(%…'    '-36678.4515'
+
+    '10'    'Industry, value a…'    '-2274.0631'
+
+Relevant variables - This low, higher probability
+     7
+
+    'Agriculture, value added (% of GDP)'
+
+    '7'    'Agriculture, valu…'    '36708.0619'
+
+----------------
+For group:
+    11
+
+    'DD'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  587.6493
+
+Relevant variables - This high, higher probability
+     2
+
+    'agriculture add(%gdp)'
+
+    '2'    'agriculture add(%…'    '-614.3837'
+
+Relevant variables - This low, higher probability
+     1
+     7
+    13
+
+    'intercept'
+    'Agriculture, value added (% of GDP)'
+    'Population, total'
+
+    '1'    'intercept'    '637.9302'
+
+    '7'    'Agriculture, valu…'    '683.1817'
+
+    '13'    'Population, total'    '614.1656'
+
+----------------
+>> 
+
