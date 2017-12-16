@@ -1,0 +1,925 @@
+>> LogiReg_C_07
+file name: 
+data/data_Prep_D_C.xlsx
+For group:
+     1
+
+    'AA'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  107.3591
+
+Relevant variables - This high, higher probability
+     6
+    11
+    14
+    19
+    28
+    37
+    44
+
+    'Industry, value added (% of GDP)'
+    'Population, female (% of total)'
+    'Unemployment, total (% of total labor force) (national estimate)'
+    'International tourism, number of departures'
+    'Imports of goods and services (annual % growth)'
+    'Fixed broadband subscriptions'
+    'Rail lines (total route-km)'
+
+    '6'    'Industry, value a…'    '-377.9561'
+
+    '11'    'Population, femal…'    '-112.0899'
+
+    '14'    'Unemployment, tot…'    '-286.1113'
+
+    '19'    'International tou…'    '-282.6927'
+
+    '28'    'Imports of goods …'    '-476.4857'
+
+    '37'    'Fixed broadband s…'    '-143.6384'
+
+    '44'    'Rail lines (total…'    '-189.9983'
+
+Relevant variables - This low, higher probability
+     1
+     3
+     8
+    16
+    24
+    25
+    27
+    34
+    36
+    45
+
+    'intercept'
+    'Agriculture, value added (% of GDP)'
+    'CO2 emissions (metric tons per capita)'
+    'Air transport, freight (million ton-km)'
+    'Exports of goods and services (% of GDP)'
+    'Exports of goods and services (annual % growth)'
+    'Imports of goods and services (% of GDP)'
+    'Improved sanitation facilities, rural (% of rural population with access)'
+    'Mobile cellular subscriptions (per 100 people)'
+    'Railways, goods transported (million ton-km)'
+
+    '1'    'intercept'    '201.5836'
+
+    '3'    'Agriculture, valu…'    '139.2829'
+
+    '8'    'CO2 emissions (me…'    '129.0366'
+
+    '16'    'Air transport, fr…'    '716.028'
+
+    '24'    'Exports of goods …'    '159.7746'
+
+    '25'    'Exports of goods …'    '280.5807'
+
+    '27'    'Imports of goods …'    '326.1126'
+
+    '34'    'Improved sanitati…'    '150.9369'
+
+    '36'    'Mobile cellular s…'    '240.3327'
+
+    '45'    'Railways, goods t…'    '122.1966'
+
+----------------
+For group:
+     2
+
+    'AB'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_07 (line 58) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  348.2179
+
+Relevant variables - This high, higher probability
+     6
+    10
+    18
+    30
+    32
+    48
+
+    'Industry, value added (% of GDP)'
+    'Population growth (annual %)'
+    'International tourism, number of arrivals'
+    'Renewable internal freshwater resources per capita (cubic meters)'
+    'Improved water source (% of population with access)'
+    'Urban population growth (annual %)'
+
+    '6'    'Industry, value a…'    '-1184.3913'
+
+    '10'    'Population growth…'    '-523.4133'
+
+    '18'    'International tou…'    '-623.7696'
+
+    '30'    'Renewable interna…'    '-352.7288'
+
+    '32'    'Improved water so…'    '-964.7755'
+
+    '48'    'Urban population …'    '-349.9091'
+
+Relevant variables - This low, higher probability
+     1
+     8
+    15
+    20
+    21
+    25
+    28
+    31
+    33
+    41
+    42
+    45
+    47
+
+    'intercept'
+    'CO2 emissions (metric tons per capita)'
+    'Air transport, passengers carried'
+    'International tourism, receipts (current US$)'
+    'International tourism, expenditures (current US$)'
+    'Exports of goods and services (annual % growth)'
+    'Imports of goods and services (annual % growth)'
+    'Improved water source, rural (% of rural population with access)'
+    'Improved sanitation facilities (% of population with access)'
+    'Researchers in R&D (per million people)'
+    'Patent applications, residents'
+    'Railways, goods transported (million ton-km)'
+    'Urban population (% of total)'
+
+    '1'    'intercept'    '2739.5301'
+
+    '8'    'CO2 emissions (me…'    '1041.9651'
+
+    '15'    'Air transport, pa…'    '597.5987'
+
+    '20'    'International tou…'    '1431.9035'
+
+    '21'    'International tou…'    '358.5306'
+
+    '25'    'Exports of goods …'    '489.4543'
+
+    '28'    'Imports of goods …'    '391.0021'
+
+    '31'    'Improved water so…'    '399.192'
+
+    '33'    'Improved sanitati…'    '356.955'
+
+    '41'    'Researchers in R&…'    '2350.801'
+
+    '42'    'Patent applicatio…'    '988.8315'
+
+    '45'    'Railways, goods t…'    '416.4374'
+
+    '47'    'Urban population …'    '356.0393'
+
+----------------
+For group:
+     3
+
+    'BA'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  181.4468
+
+Relevant variables - This high, higher probability
+    11
+    32
+    38
+    41
+    42
+    43
+
+    'Population, female (% of total)'
+    'Improved water source (% of population with access)'
+    'Fixed broadband subscriptions (per 100 people)'
+    'Researchers in R&D (per million people)'
+    'Patent applications, residents'
+    'Patent applications, nonresidents'
+
+    '11'    'Population, femal…'    '-271.1423'
+
+    '32'    'Improved water so…'    '-531.3607'
+
+    '38'    'Fixed broadband s…'    '-255.3009'
+
+    '41'    'Researchers in R&…'    '-182.187'
+
+    '42'    'Patent applicatio…'    '-254.2947'
+
+    '43'    'Patent applicatio…'    '-637.4795'
+
+Relevant variables - This low, higher probability
+     1
+     2
+     6
+    14
+    16
+    19
+    21
+    25
+    29
+    30
+    45
+    47
+    48
+
+    'intercept'
+    'unemployment rate'
+    'Industry, value added (% of GDP)'
+    'Unemployment, total (% of total labor force) (national estimate)'
+    'Air transport, freight (million ton-km)'
+    'International tourism, number of departures'
+    'International tourism, expenditures (current US$)'
+    'Exports of goods and services (annual % growth)'
+    'Imports of goods and services (current US$)'
+    'Renewable internal freshwater resources per capita (cubic meters)'
+    'Railways, goods transported (million ton-km)'
+    'Urban population (% of total)'
+    'Urban population growth (annual %)'
+
+    '1'    'intercept'    '1835.827'
+
+    '2'    'unemployment rate'    '386.1013'
+
+    '6'    'Industry, value a…'    '312.8821'
+
+    '14'    'Unemployment, tot…'    '212.9834'
+
+    '16'    'Air transport, fr…'    '342.3603'
+
+    '19'    'International tou…'    '761.4267'
+
+    '21'    'International tou…'    '230.0257'
+
+    '25'    'Exports of goods …'    '253.3189'
+
+    '29'    'Imports of goods …'    '524.1387'
+
+    '30'    'Renewable interna…'    '376.4489'
+
+    '45'    'Railways, goods t…'    '341.3803'
+
+    '47'    'Urban population …'    '190.8996'
+
+    '48'    'Urban population …'    '630.3554'
+
+----------------
+For group:
+     4
+
+    'BB'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_07 (line 58) 
+Count Error: 
+    18
+
+Coefficient Threshold: 
+    6.3189
+
+Relevant variables - This high, higher probability
+     3
+    14
+    20
+    24
+    28
+    34
+    36
+    44
+
+    'Agriculture, value added (% of GDP)'
+    'Unemployment, total (% of total labor force) (national estimate)'
+    'International tourism, receipts (current US$)'
+    'Exports of goods and services (% of GDP)'
+    'Imports of goods and services (annual % growth)'
+    'Improved sanitation facilities, rural (% of rural population with access)'
+    'Mobile cellular subscriptions (per 100 people)'
+    'Rail lines (total route-km)'
+
+    '3'    'Agriculture, valu…'    '-23.818'
+
+    '14'    'Unemployment, tot…'    '-17.9243'
+
+    '20'    'International tou…'    '-7.8391'
+
+    '24'    'Exports of goods …'    '-20.5154'
+
+    '28'    'Imports of goods …'    '-22.5415'
+
+    '34'    'Improved sanitati…'    '-12.7481'
+
+    '36'    'Mobile cellular s…'    '-8.1536'
+
+    '44'    'Rail lines (total…'    '-6.7159'
+
+Relevant variables - This low, higher probability
+     1
+     6
+     8
+    15
+    16
+    25
+    27
+    45
+
+    'intercept'
+    'Industry, value added (% of GDP)'
+    'CO2 emissions (metric tons per capita)'
+    'Air transport, passengers carried'
+    'Air transport, freight (million ton-km)'
+    'Exports of goods and services (annual % growth)'
+    'Imports of goods and services (% of GDP)'
+    'Railways, goods transported (million ton-km)'
+
+    '1'    'intercept'    '7.54'
+
+    '6'    'Industry, value a…'    '26.3814'
+
+    '8'    'CO2 emissions (me…'    '31.1415'
+
+    '15'    'Air transport, pa…'    '11.042'
+
+    '16'    'Air transport, fr…'    '13.7079'
+
+    '25'    'Exports of goods …'    '16.102'
+
+    '27'    'Imports of goods …'    '20.1741'
+
+    '45'    'Railways, goods t…'    '12.6131'
+
+----------------
+For group:
+     5
+
+    'BC'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_07 (line 58) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  200.4406
+
+Relevant variables - This high, higher probability
+    14
+    24
+    31
+    32
+    46
+
+    'Unemployment, total (% of total labor force) (national estimate)'
+    'Exports of goods and services (% of GDP)'
+    'Improved water source, rural (% of rural population with access)'
+    'Improved water source (% of population with access)'
+    'Railways, passengers carried (million passenger-km)'
+
+    '14'    'Unemployment, tot…'    '-230.8497'
+
+    '24'    'Exports of goods …'    '-929.7786'
+
+    '31'    'Improved water so…'    '-677.0643'
+
+    '32'    'Improved water so…'    '-323.3091'
+
+    '46'    'Railways, passeng…'    '-222.3122'
+
+Relevant variables - This low, higher probability
+     1
+     7
+    27
+    28
+    37
+    38
+    39
+    41
+    45
+
+    'intercept'
+    'Industry, value added (current US$)'
+    'Imports of goods and services (% of GDP)'
+    'Imports of goods and services (annual % growth)'
+    'Fixed broadband subscriptions'
+    'Fixed broadband subscriptions (per 100 people)'
+    'Individuals using the Internet (% of population)'
+    'Researchers in R&D (per million people)'
+    'Railways, goods transported (million ton-km)'
+
+    '1'    'intercept'    '1430.1878'
+
+    '7'    'Industry, value a…'    '329.3205'
+
+    '27'    'Imports of goods …'    '987.5593'
+
+    '28'    'Imports of goods …'    '498.2629'
+
+    '37'    'Fixed broadband s…'    '211.8438'
+
+    '38'    'Fixed broadband s…'    '409.8555'
+
+    '39'    'Individuals using…'    '313.041'
+
+    '41'    'Researchers in R&…'    '798.0359'
+
+    '45'    'Railways, goods t…'    '471.6099'
+
+----------------
+For group:
+     6
+
+    'CB'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_07 (line 58) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  852.2885
+
+Relevant variables - This high, higher probability
+    14
+    19
+    32
+    34
+    36
+
+    'Unemployment, total (% of total labor force) (national estimate)'
+    'International tourism, number of departures'
+    'Improved water source (% of population with access)'
+    'Improved sanitation facilities, rural (% of rural population with access)'
+    'Mobile cellular subscriptions (per 100 people)'
+
+    '14'    'Unemployment, tot…'    '-4440.8334'
+
+    '19'    'International tou…'    '-1510.2624'
+
+    '32'    'Improved water so…'    '-907.613'
+
+    '34'    'Improved sanitati…'    '-1556.2189'
+
+    '36'    'Mobile cellular s…'    '-1994.0809'
+
+Relevant variables - This low, higher probability
+     1
+    15
+    16
+    18
+    20
+    24
+    27
+    28
+    42
+
+    'intercept'
+    'Air transport, passengers carried'
+    'Air transport, freight (million ton-km)'
+    'International tourism, number of arrivals'
+    'International tourism, receipts (current US$)'
+    'Exports of goods and services (% of GDP)'
+    'Imports of goods and services (% of GDP)'
+    'Imports of goods and services (annual % growth)'
+    'Patent applications, residents'
+
+    '1'    'intercept'    '2599.9523'
+
+    '15'    'Air transport, pa…'    '916.5327'
+
+    '16'    'Air transport, fr…'    '5528.8406'
+
+    '18'    'International tou…'    '1241.8035'
+
+    '20'    'International tou…'    '1005.0566'
+
+    '24'    'Exports of goods …'    '1206.9576'
+
+    '27'    'Imports of goods …'    '2966.1772'
+
+    '28'    'Imports of goods …'    '4140.303'
+
+    '42'    'Patent applicatio…'    '2353.6183'
+
+----------------
+For group:
+     7
+
+    'CC'
+
+Count Error: 
+     9
+
+Coefficient Threshold: 
+    8.7314
+
+Relevant variables - This high, higher probability
+    16
+    20
+    25
+    34
+    40
+    41
+    43
+
+    'Air transport, freight (million ton-km)'
+    'International tourism, receipts (current US$)'
+    'Exports of goods and services (annual % growth)'
+    'Improved sanitation facilities, rural (% of rural population with access)'
+    'Secure Internet servers (per 1 million people)'
+    'Researchers in R&D (per million people)'
+    'Patent applications, nonresidents'
+
+    '16'    'Air transport, fr…'    '-33.533'
+
+    '20'    'International tou…'    '-37.248'
+
+    '25'    'Exports of goods …'    '-17.5385'
+
+    '34'    'Improved sanitati…'    '-15.8763'
+
+    '40'    'Secure Internet s…'    '-10.2106'
+
+    '41'    'Researchers in R&…'    '-9.4799'
+
+    '43'    'Patent applicatio…'    '-15.812'
+
+Relevant variables - This low, higher probability
+     1
+     3
+     6
+    18
+    19
+    24
+    27
+    28
+    37
+    42
+
+    'intercept'
+    'Agriculture, value added (% of GDP)'
+    'Industry, value added (% of GDP)'
+    'International tourism, number of arrivals'
+    'International tourism, number of departures'
+    'Exports of goods and services (% of GDP)'
+    'Imports of goods and services (% of GDP)'
+    'Imports of goods and services (annual % growth)'
+    'Fixed broadband subscriptions'
+    'Patent applications, residents'
+
+    '1'    'intercept'    '24.6019'
+
+    '3'    'Agriculture, valu…'    '22.928'
+
+    '6'    'Industry, value a…'    '23.6688'
+
+    '18'    'International tou…'    '34.0894'
+
+    '19'    'International tou…'    '12.6198'
+
+    '24'    'Exports of goods …'    '13.2777'
+
+    '27'    'Imports of goods …'    '36.8727'
+
+    '28'    'Imports of goods …'    '32.4615'
+
+    '37'    'Fixed broadband s…'    '17.0286'
+
+    '42'    'Patent applicatio…'    '12.5873'
+
+----------------
+For group:
+     8
+
+    'CD'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_07 (line 58) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  743.2435
+
+Relevant variables - This high, higher probability
+    17
+    25
+    28
+
+    'Air transport, registered carrier departures worldwide'
+    'Exports of goods and services (annual % growth)'
+    'Imports of goods and services (annual % growth)'
+
+    '17'    'Air transport, re…'    '-1026.3222'
+
+    '25'    'Exports of goods …'    '-962.863'
+
+    '28'    'Imports of goods …'    '-1693.565'
+
+Relevant variables - This low, higher probability
+     1
+     7
+    19
+    20
+    22
+    24
+    27
+    29
+    36
+
+    'intercept'
+    'Industry, value added (current US$)'
+    'International tourism, number of departures'
+    'International tourism, receipts (current US$)'
+    'International tourism, expenditures (% of total imports)'
+    'Exports of goods and services (% of GDP)'
+    'Imports of goods and services (% of GDP)'
+    'Imports of goods and services (current US$)'
+    'Mobile cellular subscriptions (per 100 people)'
+
+    '1'    'intercept'    '3732.6934'
+
+    '7'    'Industry, value a…'    '1861.6591'
+
+    '19'    'International tou…'    '1096.6767'
+
+    '20'    'International tou…'    '2100.4857'
+
+    '22'    'International tou…'    '814.2539'
+
+    '24'    'Exports of goods …'    '12212.2955'
+
+    '27'    'Imports of goods …'    '2800.5574'
+
+    '29'    'Imports of goods …'    '884.1203'
+
+    '36'    'Mobile cellular s…'    '1030.805'
+
+----------------
+For group:
+     9
+
+    'DB'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+    5.8130
+
+Relevant variables - This high, higher probability
+     5
+    24
+    26
+    28
+    29
+    48
+
+    'Agriculture value added per worker (constant 2010 US$)'
+    'Exports of goods and services (% of GDP)'
+    'Exports of goods and services (current US$)'
+    'Imports of goods and services (annual % growth)'
+    'Imports of goods and services (current US$)'
+    'Urban population growth (annual %)'
+
+    '5'    'Agriculture value…'    '-11.7707'
+
+    '24'    'Exports of goods …'    '-53.2078'
+
+    '26'    'Exports of goods …'    '-13.5983'
+
+    '28'    'Imports of goods …'    '-9.7657'
+
+    '29'    'Imports of goods …'    '-5.8893'
+
+    '48'    'Urban population …'    '-10.6729'
+
+Relevant variables - This low, higher probability
+     1
+     2
+    16
+    25
+    27
+    34
+
+    'intercept'
+    'unemployment rate'
+    'Air transport, freight (million ton-km)'
+    'Exports of goods and services (annual % growth)'
+    'Imports of goods and services (% of GDP)'
+    'Improved sanitation facilities, rural (% of rural population with access)'
+
+    '1'    'intercept'    '127.0014'
+
+    '2'    'unemployment rate'    '7.6662'
+
+    '16'    'Air transport, fr…'    '14.7171'
+
+    '25'    'Exports of goods …'    '27.5745'
+
+    '27'    'Imports of goods …'    '50.6471'
+
+    '34'    'Improved sanitati…'    '7.2016'
+
+----------------
+For group:
+    10
+
+    'DC'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   39.5316
+
+Relevant variables - This high, higher probability
+     6
+     8
+    17
+    18
+    27
+    42
+    44
+
+    'Industry, value added (% of GDP)'
+    'CO2 emissions (metric tons per capita)'
+    'Air transport, registered carrier departures worldwide'
+    'International tourism, number of arrivals'
+    'Imports of goods and services (% of GDP)'
+    'Patent applications, residents'
+    'Rail lines (total route-km)'
+
+    '6'    'Industry, value a…'    '-56.3732'
+
+    '8'    'CO2 emissions (me…'    '-65.1128'
+
+    '17'    'Air transport, re…'    '-44.9569'
+
+    '18'    'International tou…'    '-79.4733'
+
+    '27'    'Imports of goods …'    '-185.9989'
+
+    '42'    'Patent applicatio…'    '-45.8578'
+
+    '44'    'Rail lines (total…'    '-78.7478'
+
+Relevant variables - This low, higher probability
+     1
+    19
+    24
+    28
+    36
+    37
+    39
+    41
+    45
+
+    'intercept'
+    'International tourism, number of departures'
+    'Exports of goods and services (% of GDP)'
+    'Imports of goods and services (annual % growth)'
+    'Mobile cellular subscriptions (per 100 people)'
+    'Fixed broadband subscriptions'
+    'Individuals using the Internet (% of population)'
+    'Researchers in R&D (per million people)'
+    'Railways, goods transported (million ton-km)'
+
+    '1'    'intercept'    '221.2121'
+
+    '19'    'International tou…'    '161.0412'
+
+    '24'    'Exports of goods …'    '131.4838'
+
+    '28'    'Imports of goods …'    '101.6324'
+
+    '36'    'Mobile cellular s…'    '62.2311'
+
+    '37'    'Fixed broadband s…'    '88.5559'
+
+    '39'    'Individuals using…'    '69.5261'
+
+    '41'    'Researchers in R&…'    '77.8237'
+
+    '45'    'Railways, goods t…'    '121.0866'
+
+----------------
+For group:
+    11
+
+    'DD'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  101.9589
+
+Relevant variables - This high, higher probability
+     4
+     9
+    10
+    25
+    36
+
+    'Agriculture, value added (current US$)'
+    'Population, total'
+    'Population growth (annual %)'
+    'Exports of goods and services (annual % growth)'
+    'Mobile cellular subscriptions (per 100 people)'
+
+    '4'    'Agriculture, valu…'    '-144.2925'
+
+    '9'    'Population, total'    '-125.5041'
+
+    '10'    'Population growth…'    '-117.4811'
+
+    '25'    'Exports of goods …'    '-121.2474'
+
+    '36'    'Mobile cellular s…'    '-174.043'
+
+Relevant variables - This low, higher probability
+     1
+     3
+     6
+     7
+     8
+    22
+    32
+    34
+    42
+    43
+    48
+
+    'intercept'
+    'Agriculture, value added (% of GDP)'
+    'Industry, value added (% of GDP)'
+    'Industry, value added (current US$)'
+    'CO2 emissions (metric tons per capita)'
+    'International tourism, expenditures (% of total imports)'
+    'Improved water source (% of population with access)'
+    'Improved sanitation facilities, rural (% of rural population with access)'
+    'Patent applications, residents'
+    'Patent applications, nonresidents'
+    'Urban population growth (annual %)'
+
+    '1'    'intercept'    '1096.6023'
+
+    '3'    'Agriculture, valu…'    '471.6129'
+
+    '6'    'Industry, value a…'    '173.7142'
+
+    '7'    'Industry, value a…'    '215.3276'
+
+    '8'    'CO2 emissions (me…'    '253.7077'
+
+    '22'    'International tou…'    '186.3524'
+
+    '32'    'Improved water so…'    '158.2708'
+
+    '34'    'Improved sanitati…'    '123.123'
+
+    '42'    'Patent applicatio…'    '250.6618'
+
+    '43'    'Patent applicatio…'    '553.7181'
+
+    '48'    'Urban population …'    '187.4994'
+
+----------------
+>> 
