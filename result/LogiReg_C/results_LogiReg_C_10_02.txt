@@ -1,0 +1,506 @@
+>> LogiReg_C_10
+file name: 
+data/data_Prep_D_C.xlsx
+For group:
+     1
+
+    'AA'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  232.5172
+
+Relevant variables - This high, higher probability
+     9
+    18
+
+    'Industry, value added (current US$)'
+    'International tourism, receipts (current US$)'
+
+    '9'    'Industry, value a…'    '-390.23'
+
+    '18'    'International tou…'    '-292.2427'
+
+Relevant variables - This low, higher probability
+    15
+    19
+    26
+
+    'Air transport, registered carrier departures worldwide'
+    'International tourism, expenditures (current US$)'
+    'Imports of goods and services (annual % growth)'
+
+    '15'    'Air transport, re…'    '276.2478'
+
+    '19'    'International tou…'    '237.8484'
+
+    '26'    'Imports of goods …'    '452.6444'
+
+----------------
+For group:
+     2
+
+    'AB'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_10 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   1.2656e+03
+
+Relevant variables - This high, higher probability
+    13
+
+    'Air transport, passengers carried'
+
+    '13'    'Air transport, pa…'    '-3847.7077'
+
+Relevant variables - This low, higher probability
+     1
+    15
+    19
+    40
+    41
+
+    'intercept'
+    'Air transport, registered carrier departures worldwide'
+    'International tourism, expenditures (current US$)'
+    'Patent applications, residents'
+    'Patent applications, nonresidents'
+
+    '1'    'intercept'    '2088.7421'
+
+    '15'    'Air transport, re…'    '2050.0324'
+
+    '19'    'International tou…'    '1271.5422'
+
+    '40'    'Patent applicatio…'    '2282.5398'
+
+    '41'    'Patent applicatio…'    '2707.8948'
+
+----------------
+For group:
+     3
+
+    'BA'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_10 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  458.3680
+
+Relevant variables - This high, higher probability
+    31
+    41
+
+    'Improved sanitation facilities (% of population with access)'
+    'Patent applications, nonresidents'
+
+    '31'    'Improved sanitati…'    '-494.1165'
+
+    '41'    'Patent applicatio…'    '-513.837'
+
+Relevant variables - This low, higher probability
+     1
+    18
+    19
+    28
+
+    'intercept'
+    'International tourism, receipts (current US$)'
+    'International tourism, expenditures (current US$)'
+    'Renewable internal freshwater resources per capita (cubic meters)'
+
+    '1'    'intercept'    '1075.6166'
+
+    '18'    'International tou…'    '779.3644'
+
+    '19'    'International tou…'    '477.8086'
+
+    '28'    'Renewable interna…'    '519.1527'
+
+----------------
+For group:
+     4
+
+    'BB'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_10 (line 59) 
+Count Error: 
+    23
+
+Coefficient Threshold: 
+   16.7144
+
+Relevant variables - This high, higher probability
+     7
+    23
+    27
+
+    'Agriculture, value added (current US$)'
+    'Exports of goods and services (annual % growth)'
+    'Imports of goods and services (current US$)'
+
+    '7'    'Agriculture, valu…'    '-24.9496'
+
+    '23'    'Exports of goods …'    '-16.7486'
+
+    '27'    'Imports of goods …'    '-22.9287'
+
+Relevant variables - This low, higher probability
+     5
+     9
+
+    'population'
+    'Industry, value added (current US$)'
+
+    '5'    'population'    '33.0104'
+
+    '9'    'Industry, value a…'    '29.7313'
+
+----------------
+For group:
+     5
+
+    'BC'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_10 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  774.3227
+
+Relevant variables - This high, higher probability
+    30
+
+    'Improved water source (% of population with access)'
+
+    '30'    'Improved water so…'    '-781.5027'
+
+Relevant variables - This low, higher probability
+     1
+     3
+     7
+    37
+    41
+
+    'intercept'
+    'CO2(ton)'
+    'Agriculture, value added (current US$)'
+    'Individuals using the Internet (% of population)'
+    'Patent applications, nonresidents'
+
+    '1'    'intercept'    '3269.4641'
+
+    '3'    'CO2(ton)'    '899.1678'
+
+    '7'    'Agriculture, valu…'    '899.0178'
+
+    '37'    'Individuals using…'    '1580.645'
+
+    '41'    'Patent applicatio…'    '1860.87'
+
+----------------
+For group:
+     6
+
+    'CB'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_10 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   1.6845e+03
+
+Relevant variables - This high, higher probability
+Relevant variables - This low, higher probability
+     1
+    15
+    19
+    23
+    41
+    43
+
+    'intercept'
+    'Air transport, registered carrier departures worldwide'
+    'International tourism, expenditures (current US$)'
+    'Exports of goods and services (annual % growth)'
+    'Patent applications, nonresidents'
+    'Railways, goods transported (million ton-km)'
+
+    '1'    'intercept'    '2782.9501'
+
+    '15'    'Air transport, re…'    '3081.0229'
+
+    '19'    'International tou…'    '2267.6962'
+
+    '23'    'Exports of goods …'    '1922.358'
+
+    '41'    'Patent applicatio…'    '1943.9214'
+
+    '43'    'Railways, goods t…'    '1715.4492'
+
+----------------
+For group:
+     7
+
+    'CC'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_10 (line 59) 
+Count Error: 
+     4
+
+Coefficient Threshold: 
+   58.4509
+
+Relevant variables - This high, higher probability
+    13
+    19
+
+    'Air transport, passengers carried'
+    'International tourism, expenditures (current US$)'
+
+    '13'    'Air transport, pa…'    '-115.9994'
+
+    '19'    'International tou…'    '-116.6422'
+
+Relevant variables - This low, higher probability
+    17
+    24
+    35
+
+    'International tourism, number of departures'
+    'Exports of goods and services (current US$)'
+    'Fixed broadband subscriptions'
+
+    '17'    'International tou…'    '101.3158'
+
+    '24'    'Exports of goods …'    '60.3156'
+
+    '35'    'Fixed broadband s…'    '144.6588'
+
+----------------
+For group:
+     8
+
+    'CD'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_10 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   3.0140e+03
+
+Relevant variables - This high, higher probability
+Relevant variables - This low, higher probability
+     1
+     9
+    14
+    23
+    26
+    41
+
+    'intercept'
+    'Industry, value added (current US$)'
+    'Air transport, freight (million ton-km)'
+    'Exports of goods and services (annual % growth)'
+    'Imports of goods and services (annual % growth)'
+    'Patent applications, nonresidents'
+
+    '1'    'intercept'    '7112.6634'
+
+    '9'    'Industry, value a…'    '3756.9143'
+
+    '14'    'Air transport, fr…'    '3045.5545'
+
+    '23'    'Exports of goods …'    '4116.992'
+
+    '26'    'Imports of goods …'    '5717.3768'
+
+    '41'    'Patent applicatio…'    '14864.5276'
+
+----------------
+For group:
+     9
+
+    'DB'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   10.2982
+
+Relevant variables - This high, higher probability
+    23
+    25
+    27
+
+    'Exports of goods and services (annual % growth)'
+    'Imports of goods and services (% of GDP)'
+    'Imports of goods and services (current US$)'
+
+    '23'    'Exports of goods …'    '-49.5427'
+
+    '25'    'Imports of goods …'    '-14.2832'
+
+    '27'    'Imports of goods …'    '-10.3141'
+
+Relevant variables - This low, higher probability
+     1
+    24
+    26
+
+    'intercept'
+    'Exports of goods and services (current US$)'
+    'Imports of goods and services (annual % growth)'
+
+    '1'    'intercept'    '94.7417'
+
+    '24'    'Exports of goods …'    '19.8775'
+
+    '26'    'Imports of goods …'    '48.4347'
+
+----------------
+For group:
+    10
+
+    'DC'
+
+Warning: Maximum likelihood estimation did not
+converge.  Iteration limit
+exceeded.  You may need to merge categories to
+increase observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_C_10 (line 59) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   99.0634
+
+Relevant variables - This high, higher probability
+    18
+
+    'International tourism, receipts (current US$)'
+
+    '18'    'International tou…'    '-99.7213'
+
+Relevant variables - This low, higher probability
+     1
+     9
+    15
+    27
+    37
+
+    'intercept'
+    'Industry, value added (current US$)'
+    'Air transport, registered carrier departures worldwide'
+    'Imports of goods and services (current US$)'
+    'Individuals using the Internet (% of population)'
+
+    '1'    'intercept'    '210.0399'
+
+    '9'    'Industry, value a…'    '141.236'
+
+    '15'    'Air transport, re…'    '161.8802'
+
+    '27'    'Imports of goods …'    '111.288'
+
+    '37'    'Individuals using…'    '145.8346'
+
+----------------
+For group:
+    11
+
+    'DD'
+
+Count Error: 
+     0
+
+Coefficient Threshold: 
+  376.4496
+
+Relevant variables - This high, higher probability
+     9
+    11
+
+    'Industry, value added (current US$)'
+    'Population, female (% of total)'
+
+    '9'    'Industry, value a…'    '-713.3685'
+
+    '11'    'Population, femal…'    '-955.6556'
+
+Relevant variables - This low, higher probability
+     1
+     7
+    14
+    42
+
+    'intercept'
+    'Agriculture, value added (current US$)'
+    'Air transport, freight (million ton-km)'
+    'Rail lines (total route-km)'
+
+    '1'    'intercept'    '1332.7726'
+
+    '7'    'Agriculture, valu…'    '578.3644'
+
+    '14'    'Air transport, fr…'    '1191.2757'
+
+    '42'    'Rail lines (total…'    '377.8725'
+
+----------------
+>> 
