@@ -59,61 +59,116 @@
 
             // load the data (using the timelyportfolio csv method)
             d3.csv("data/countries_clusters_data_01_C_01.csv", function (error, data) {
-                console.log(data);
                 // prepare data
                 var temp = { "nodes": [], "links": [] };
+                var linkDetail = [];
+                var AA = { "group": "AA", "country": [] };
+                var AB = { "group": "AB", "country": [] };
+                var AC = { "group": "AC", "country": [] };
+                var AD = { "group": "AD", "country": [] };
+                var BA = { "group": "BA", "country": [] };
+                var BB = { "group": "BB", "country": [] };
+                var BC = { "group": "BC", "country": [] };
+                var BD = { "group": "BD", "country": [] };
+                var CA = { "group": "CA", "country": [] };
+                var CB = { "group": "CB", "country": [] };
+                var CC = { "group": "CC", "country": [] };
+                var CD = { "group": "CD", "country": [] };
+                var DA = { "group": "DA", "country": [] };
+                var DB = { "group": "DB", "country": [] };
+                var DC = { "group": "DC", "country": [] };
+                var DD = { "group": "DD", "country": [] };
 
-                var transitionCount = new Array(16).fill(0);;
+                var transitionCount = new Array(16).fill(0);
+
                 data.forEach(function (d) {
+                    var temp = { "name": d.Country, "code": d.Country_Code };
                     if (d.Transition_Types == "AA") {
                         transitionCount[0] = transitionCount[0] + 1;
+                        AA.country.push(temp);
                     }
                     else if (d.Transition_Types == "AB") {
                         transitionCount[1] = transitionCount[1] + 1;
+                        AB.country.push(temp);
                     }
                     else if (d.Transition_Types == "AC") {
                         transitionCount[2] = transitionCount[2] + 1;
+                        AC.country.push(temp);
                     }
                     else if (d.Transition_Types == "AD") {
                         transitionCount[3] = transitionCount[3] + 1;
+                        AD.country.push(temp);
                     }
                     else if (d.Transition_Types == "BA") {
                         transitionCount[4] = transitionCount[4] + 1;
+                        BA.country.push(temp);
                     }
                     else if (d.Transition_Types == "BB") {
                         transitionCount[5] = transitionCount[5] + 1;
+                        BB.country.push(temp);
                     }
                     else if (d.Transition_Types == "BC") {
                         transitionCount[6] = transitionCount[6] + 1;
+                        BC.country.push(temp);
                     }
                     else if (d.Transition_Types == "BD") {
                         transitionCount[7] = transitionCount[7] + 1;
+                        BD.country.push(temp);
                     }
                     else if (d.Transition_Types == "CA") {
                         transitionCount[8] = transitionCount[8] + 1;
+                        CA.country.push(temp);
                     }
                     else if (d.Transition_Types == "CB") {
                         transitionCount[9] = transitionCount[9] + 1;
+                        CB.country.push(temp);
                     }
                     else if (d.Transition_Types == "CC") {
                         transitionCount[10] = transitionCount[10] + 1;
+                        CC.country.push(temp);
                     }
                     else if (d.Transition_Types == "CD") {
                         transitionCount[11] = transitionCount[11] + 1;
+                        CD.country.push(temp);
                     }
                     else if (d.Transition_Types == "DA") {
                         transitionCount[12] = transitionCount[12] + 1;
+                        DA.country.push(temp);
                     }
                     else if (d.Transition_Types == "DB") {
                         transitionCount[13] = transitionCount[13] + 1;
+                        DB.country.push(temp);
                     }
                     else if (d.Transition_Types == "DC") {
                         transitionCount[14] = transitionCount[14] + 1;
+                        DC.country.push(temp);
                     }
                     else if (d.Transition_Types == "DD") {
                         transitionCount[15] = transitionCount[15] + 1;
+                        DD.country.push(temp);
                     }
                 });
+
+                //var countriesGroup = { AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD };
+                var countriesGroup = [];
+                countriesGroup.push(AA);
+                countriesGroup.push(AB);
+                countriesGroup.push(AC);
+                countriesGroup.push(AD);
+                countriesGroup.push(BA);
+                countriesGroup.push(BB);
+                countriesGroup.push(BC);
+                countriesGroup.push(BD);
+                countriesGroup.push(CA);
+                countriesGroup.push(CB);
+                countriesGroup.push(CC);
+                countriesGroup.push(CD);
+                countriesGroup.push(DA);
+                countriesGroup.push(DB);
+                countriesGroup.push(DC);
+                countriesGroup.push(DD);
+
+
                 var links = [{ "source": "A90", "target": "A15", "value": transitionCount[0] },
                 { "source": "A90", "target": "B15", "value": transitionCount[1] },
                 { "source": "A90", "target": "C15", "value": transitionCount[2] },
@@ -134,14 +189,14 @@
                 var source = [{ "name": "A90" }, { "name": "B90" }, { "name": "C90" }, { "name": "D90" }];
                 var target = [{ "name": "A15" }, { "name": "B15" }, { "name": "C15" }, { "name": "D15" }];
                 var nodes = source.concat(target);
+
                 nodes.forEach(function (d) {
                     temp.nodes.push(d);
                 });
                 links.forEach(function (d) {
-                    temp.links.push(d);
+                    if (d.value)
+                        temp.links.push(d);
                 });
-
-                console.log(temp);
 
                 //set up graph in same style as original example but empty
                 /*graph = { "nodes": [], "links": [] };
@@ -194,10 +249,26 @@
                     .sort(function (a, b) { return b.dy - a.dy; });
 
                 // add the link titles
-                link.append("title")
+                /*link.append("title")
                     .text(function (d) {
                         return d.source.name + " → " +
                             d.target.name + "\n" + format(d.value);
+                    });*/
+                console.log(countriesGroup);
+                link.append("title")
+                    .text(function (d) {
+                        var returnStr = "";
+                        countriesGroup.forEach(function (dd) {
+                            if (d.source.name.substring(0, 1) == "A" && d.target.name.substring(0, 1) == "A" && dd.group == "AA") {
+                                dd.country.forEach(function (ddd) {
+                                    returnStr += ddd.name + "\n";
+                                })
+                                console.log(returnStr);
+                            }
+                        })
+                        return returnStr;
+                        /*return d.source.name + " → " +
+                            d.target.name + "\n" + format(d.value);*/
                     });
 
                 // add in the nodes
