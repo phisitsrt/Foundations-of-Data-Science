@@ -259,14 +259,14 @@
                     .text(function (d) {
                         var returnStr = "";
                         countriesGroup.forEach(function (dd) {
-                            if (d.source.name.substring(0, 1) == "A" && d.target.name.substring(0, 1) == "A" && dd.group == "AA") {
+                            if (d.source.name.substring(0, 1) + d.target.name.substring(0, 1) == dd.group ) {
                                 dd.country.forEach(function (ddd) {
                                     returnStr += ddd.name + "\n";
                                 })
                                 console.log(returnStr);
                             }
                         })
-                        return returnStr;
+                        return returnStr + "\n" + format(d.value);
                         /*return d.source.name + " → " +
                             d.target.name + "\n" + format(d.value);*/
                     });
