@@ -1,0 +1,112 @@
+﻿>> LogiReg_SigInd_C_12_08
+file name: 
+data/data_Prep_D_C.xlsx
+For group:
+     2     5
+
+    'AB'    'BC'
+
+number of countries :
+    10
+
+    'Antigua and Barbuda'    'ATG'
+    'Bahamas'                'BHS'
+    'Croatia'                'HRV'
+    'Cuba'                   'CUB'
+    'Honduras'               'HND'
+    'Libya'                  'LBY'
+    'Lithuania'              'LTU'
+    'Montenegro'             'MNE'
+    'Syria'                  'SYR'
+    'Tonga'                  'TON'
+
+Warning: Maximum likelihood estimation did not converge.
+Iteration limit
+exceeded.  You may need to merge categories to increase
+observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_SigInd_C_12_08 (line 78) 
+Count Error: 
+     3
+
+Coefficient Threshold: 
+   18.2519
+
+Relevant variables - This high, higher probability
+     5
+    15
+
+    'population'
+    'Air transport, registered carrier departures worldwide'
+
+    '5'    'population'    '-19.4453'
+
+    '15'    'Air transport, re…'    '-59.1761'
+
+Relevant variables - This low, higher probability
+     1
+    13
+    19
+    23
+    28
+    33
+    40
+    41
+
+    'intercept'
+    'Air transport, passengers carried'
+    'International tourism, expenditures (current US$)'
+    'Exports of goods and services (annual % growth)'
+    'Renewable internal freshwater resources per capita (cubic meters)'
+    'Mobile cellular subscriptions'
+    'Patent applications, residents'
+    'Patent applications, nonresidents'
+
+    '1'    'intercept'    '57.2815'
+
+    '13'    'Air transport, pa…'    '36.4557'
+
+    '19'    'International tou…'    '40.0962'
+
+    '23'    'Exports of goods …'    '42.9091'
+
+    '28'    'Renewable interna…'    '35.4228'
+
+    '33'    'Mobile cellular s…'    '26.796'
+
+    '40'    'Patent applicatio…'    '39.7415'
+
+    '41'    'Patent applicatio…'    '96.1232'
+
+P-value Threshold: 
+   3.8697e-11
+
+Significant Indicators: 
+     1
+    28
+    41
+
+    'intercept'
+    'Renewable internal freshwater resources per capita (cubic meters)'
+    'Patent applications, nonresidents'
+
+Coefficient : 
+    '1'    'intercept'    '57.2815'
+
+    '28'    'Renewable interna…'    '35.4228'
+
+    '41'    'Patent applicatio…'    '96.1232'
+
+p-Value : 
+    '1'    'intercept'    '0'
+
+    '28'    'Renewable interna…'    '2.7256e-21'
+
+    '41'    'Patent applicatio…'    '5.3023e-22'
+
+Count Error: 
+     3
+
+----------------
+>> 

@@ -1,0 +1,149 @@
+﻿>> LogiReg_SigInd_C_12_08
+file name: 
+data/data_Prep_D_C.xlsx
+For group:
+     1     3
+
+    'AA'    'BA'
+
+number of countries :
+    47
+
+    'Andorra'                 'AND'
+    'Aruba'                   'ABW'
+    'Australia'               'AUS'
+    'Austria'                 'AUT'
+    'Bahrain'                 'BHR'
+    'Belgium'                 'BEL'
+    'Bermuda'                 'BMU'
+    'Brunei'                  'BRN'
+    'Canada'                  'CAN'
+    'Chile'                   'CHL'
+    'Cyprus'                  'CYP'
+    'Czech Republic'          'CZE'
+    'Denmark'                 'DNK'
+    'Estonia'                 'EST'
+    'Finland'                 'FIN'
+    'France'                  'FRA'
+    'Germany'                 'DEU'
+    'Greece'                  'GRC'
+    'HongKong ,China'         'HKG'
+    'Iceland'                 'ISL'
+    'Ireland'                 'IRL'
+    'Israel'                  'ISR'
+    'Italy'                   'ITA'
+    'Japan'                   'JPN'
+    'Kuwait'                  'KWT'
+    'Luxembourg'              'LUX'
+    'Macao ,China'            'MAC'
+    'Malta'                   'MLT'
+    'Netherlands'             'NLD'
+    'New Zealand'             'NZL'
+    'Norway'                  'NOR'
+    'Oman'                    'OMN'
+    'Poland'                  'POL'
+    'Portugal'                'PRT'
+    'Puerto Rico'             'PRI'
+    'Qatar'                   'QAT'
+    'Saudi Arabia'            'SAU'
+    'Singapore'               'SGP'
+    'Slovak Republic'         'SVK'
+    'Slovenia'                'SVN'
+    'South Korea'             'KOR'
+    'Spain'                   'ESP'
+    'Sweden'                  'SWE'
+    'Switzerland'             'CHE'
+    'United Arab Emirates'    'ARE'
+    'United Kingdom'          'GBR'
+    'United States'           'USA'
+
+Warning: Maximum likelihood estimation did not converge.
+Iteration limit
+exceeded.  You may need to merge categories to increase
+observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_SigInd_C_12_08 (line 78) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   26.8807
+
+Relevant variables - This high, higher probability
+     9
+    12
+    14
+    24
+    35
+
+    'Industry, value added (current US$)'
+    'Population, male (% of total)'
+    'Air transport, freight (million ton-km)'
+    'Exports of goods and services (current US$)'
+    'Fixed broadband subscriptions'
+
+    '9'    'Industry, value a…'    '-174.2713'
+
+    '12'    'Population, male …'    '-30.158'
+
+    '14'    'Air transport, fr…'    '-32.7735'
+
+    '24'    'Exports of goods …'    '-67.7724'
+
+    '35'    'Fixed broadband s…'    '-38.8575'
+
+Relevant variables - This low, higher probability
+     1
+    11
+    33
+    41
+    44
+
+    'intercept'
+    'Population, female (% of total)'
+    'Mobile cellular subscriptions'
+    'Patent applications, nonresidents'
+    'Railways, passengers carried (million passenger-km)'
+
+    '1'    'intercept'    '38.2926'
+
+    '11'    'Population, femal…'    '28.0136'
+
+    '33'    'Mobile cellular s…'    '67.1628'
+
+    '41'    'Patent applicatio…'    '198.1585'
+
+    '44'    'Railways, passeng…'    '58.4877'
+
+P-value Threshold: 
+   3.3640e-64
+
+Significant Indicators: 
+     1
+    41
+    47
+
+    'intercept'
+    'Patent applications, nonresidents'
+    'Oil rents (% of GDP)'
+
+Coefficient : 
+    '1'    'intercept'    '38.2926'
+
+    '41'    'Patent applicatio…'    '198.1585'
+
+    '47'    'Oil rents (% of G…'    '26.3952'
+
+p-Value : 
+    '1'    'intercept'    '6.83e-316'
+
+    '41'    'Patent applicatio…'    '1.4988e-185'
+
+    '47'    'Oil rents (% of G…'    '3.7422e-88'
+
+Count Error: 
+     0
+
+----------------
+>> 

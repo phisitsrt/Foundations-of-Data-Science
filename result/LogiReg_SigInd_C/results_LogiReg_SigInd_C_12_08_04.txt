@@ -1,0 +1,289 @@
+﻿>> LogiReg_SigInd_C_12_08
+file name: 
+data/data_Prep_D_C.xlsx
+For group:
+     9    10
+
+    'DB'    'DC'
+
+number of countries :
+    13
+
+    'Angola'               'AGO'
+    'Bangladesh'           'BGD'
+    'Cambodia'             'KHM'
+    'Comoros'              'COM'
+    'Equatorial Guinea'    'GNQ'
+    'Ethiopia'             'ETH'
+    'Lao'                  'LAO'
+    'Myanmar'              'MMR'
+    'Nepal'                'NPL'
+    'Nigeria'              'NGA'
+    'Rwanda'               'RWA'
+    'Tanzania'             'TZA'
+    'Timor-Leste'          'TLS'
+
+Warning: Maximum likelihood estimation did not converge.  Iteration
+limit
+exceeded.  You may need to merge categories to increase observed
+counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_SigInd_C_12_08 (line 79) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   1.1095e+03
+
+Relevant variables - This high, higher probability
+     9
+    26
+
+    'Industry, value added (current US$)'
+    'Imports of goods and services (annual % growth)'
+
+    '9'    'Industry, value a…'    '-4390.7925'
+
+    '26'    'Imports of goods …'    '-3197.0904'
+
+Relevant variables - This low, higher probability
+     1
+    13
+    19
+    23
+    24
+    38
+    41
+    44
+
+    'intercept'
+    'Air transport, passengers carried'
+    'International tourism, expenditures (current US$)'
+    'Exports of goods and services (annual % growth)'
+    'Exports of goods and services (current US$)'
+    'Secure Internet servers (per 1 million people)'
+    'Patent applications, nonresidents'
+    'Railways, passengers carried (million passenger-km)'
+
+    '1'    'intercept'    '2701.2724'
+
+    '13'    'Air transport, pa…'    '5184.5782'
+
+    '19'    'International tou…'    '1204.8752'
+
+    '23'    'Exports of goods …'    '3118.8282'
+
+    '24'    'Exports of goods …'    '2218.8206'
+
+    '38'    'Secure Internet s…'    '1660.7944'
+
+    '41'    'Patent applicatio…'    '1194.0317'
+
+    '44'    'Railways, passeng…'    '1148.3717'
+
+P-value Threshold: 
+     0
+
+Significant Indicators: 
+     1
+     2
+     3
+     4
+     7
+     9
+    11
+    12
+    13
+    16
+    17
+    18
+    19
+    20
+    21
+    23
+    24
+    25
+    26
+    30
+    31
+    32
+    33
+    35
+    36
+    37
+    38
+    39
+    40
+    41
+    42
+    44
+
+    'intercept'
+    'agriculture add(%gdp)'
+    'CO2(ton)'
+    'Industry, value added (% of GDP)'
+    'Agriculture, value added (current US$)'
+    'Industry, value added (current US$)'
+    'Population, female (% of total)'
+    'Population, male (% of total)'
+    'Air transport, passengers carried'
+    'International tourism, number of arrivals'
+    'International tourism, number of departures'
+    'International tourism, receipts (current US$)'
+    'International tourism, expenditures (current US$)'
+    'International tourism, expenditures (% of total imports)'
+    'International tourism, receipts (% of total exports)'
+    'Exports of goods and services (annual % growth)'
+    'Exports of goods and services (current US$)'
+    'Imports of goods and services (% of GDP)'
+    'Imports of goods and services (annual % growth)'
+    'Improved water source (% of population with access)'
+    'Improved sanitation facilities (% of population with access)'
+    'Improved sanitation facilities, rural (% of rural population with access)'
+    'Mobile cellular subscriptions'
+    'Fixed broadband subscriptions'
+    'Fixed broadband subscriptions (per 100 people)'
+    'Individuals using the Internet (% of population)'
+    'Secure Internet servers (per 1 million people)'
+    'Researchers in R&D (per million people)'
+    'Patent applications, residents'
+    'Patent applications, nonresidents'
+    'Rail lines (total route-km)'
+    'Railways, passengers carried (million passenger-km)'
+
+Coefficient : 
+    '1'    'intercept'    '2701.2724'
+
+    '2'    'agriculture add(%…'    '-33.4894'
+
+    '3'    'CO2(ton)'    '296.9806'
+
+    '4'    'Industry, value a…'    '-166.0284'
+
+    '7'    'Agriculture, valu…'    '-667.0241'
+
+    '9'    'Industry, value a…'    '-4390.7925'
+
+    '11'    'Population, femal…'    '-481.6032'
+
+    '12'    'Population, male …'    '-571.8033'
+
+    '13'    'Air transport, pa…'    '5184.5782'
+
+    '16'    'International tou…'    '-965.7909'
+
+    '17'    'International tou…'    '-598.7528'
+
+    '18'    'International tou…'    '504.5775'
+
+    '19'    'International tou…'    '1204.8752'
+
+    '20'    'International tou…'    '-85.1666'
+
+    '21'    'International tou…'    '-212.0543'
+
+    '23'    'Exports of goods …'    '3118.8282'
+
+    '24'    'Exports of goods …'    '2218.8206'
+
+    '25'    'Imports of goods …'    '-43.6537'
+
+    '26'    'Imports of goods …'    '-3197.0904'
+
+    '30'    'Improved water so…'    '163.446'
+
+    '31'    'Improved sanitati…'    '-212.5088'
+
+    '32'    'Improved sanitati…'    '255.126'
+
+    '33'    'Mobile cellular s…'    '-829.2326'
+
+    '35'    'Fixed broadband s…'    '-1025.1836'
+
+    '36'    'Fixed broadband s…'    '543.1068'
+
+    '37'    'Individuals using…'    '278.0507'
+
+    '38'    'Secure Internet s…'    '1660.7944'
+
+    '39'    'Researchers in R&…'    '-289.5117'
+
+    '40'    'Patent applicatio…'    '715.5951'
+
+    '41'    'Patent applicatio…'    '1194.0317'
+
+    '42'    'Rail lines (total…'    '1092.8334'
+
+    '44'    'Railways, passeng…'    '1148.3717'
+
+p-Value : 
+    '1'    'intercept'    '0'
+
+    '2'    'agriculture add(%…'    '0'
+
+    '3'    'CO2(ton)'    '0'
+
+    '4'    'Industry, value a…'    '0'
+
+    '7'    'Agriculture, valu…'    '0'
+
+    '9'    'Industry, value a…'    '0'
+
+    '11'    'Population, femal…'    '0'
+
+    '12'    'Population, male …'    '0'
+
+    '13'    'Air transport, pa…'    '0'
+
+    '16'    'International tou…'    '0'
+
+    '17'    'International tou…'    '0'
+
+    '18'    'International tou…'    '0'
+
+    '19'    'International tou…'    '0'
+
+    '20'    'International tou…'    '0'
+
+    '21'    'International tou…'    '0'
+
+    '23'    'Exports of goods …'    '0'
+
+    '24'    'Exports of goods …'    '0'
+
+    '25'    'Imports of goods …'    '0'
+
+    '26'    'Imports of goods …'    '0'
+
+    '30'    'Improved water so…'    '0'
+
+    '31'    'Improved sanitati…'    '0'
+
+    '32'    'Improved sanitati…'    '0'
+
+    '33'    'Mobile cellular s…'    '0'
+
+    '35'    'Fixed broadband s…'    '0'
+
+    '36'    'Fixed broadband s…'    '0'
+
+    '37'    'Individuals using…'    '0'
+
+    '38'    'Secure Internet s…'    '0'
+
+    '39'    'Researchers in R&…'    '0'
+
+    '40'    'Patent applicatio…'    '0'
+
+    '41'    'Patent applicatio…'    '0'
+
+    '42'    'Rail lines (total…'    '0'
+
+    '44'    'Railways, passeng…'    '0'
+
+Count Error: 
+     0
+
+----------------
+>> 

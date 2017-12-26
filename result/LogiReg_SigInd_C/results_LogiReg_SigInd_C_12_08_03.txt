@@ -1,0 +1,114 @@
+﻿>> LogiReg_SigInd_C_12_08
+file name: 
+data/data_Prep_D_C.xlsx
+For group:
+     6     9
+
+    'CB'    'DB'
+
+number of countries :
+    12
+
+    'Bhutan'               'BTN'
+    'Bolivia'              'BOL'
+    'Cape Verde'           'CPV'
+    'China'                'CHN'
+    'Egypt'                'EGY'
+    'Equatorial Guinea'    'GNQ'
+    'Gabon'                'GAB'
+    'Guatemala'            'GTM'
+    'Indonesia'            'IDN'
+    'Maldives'             'MDV'
+    'Mongolia'             'MNG'
+    'Vietnam'              'VNM'
+
+Warning: Maximum likelihood estimation did not converge.
+Iteration limit
+exceeded.  You may need to merge categories to increase
+observed counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_SigInd_C_12_08 (line 78) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   37.9153
+
+Relevant variables - This high, higher probability
+     7
+    18
+    23
+    28
+
+    'Agriculture, value added (current US$)'
+    'International tourism, receipts (current US$)'
+    'Exports of goods and services (annual % growth)'
+    'Renewable internal freshwater resources per capita (cubic meters)'
+
+    '7'    'Agriculture, valu…'    '-41.7101'
+
+    '18'    'International tou…'    '-60.1813'
+
+    '23'    'Exports of goods …'    '-109.2575'
+
+    '28'    'Renewable interna…'    '-39.485'
+
+Relevant variables - This low, higher probability
+     1
+     8
+    19
+    26
+    27
+    36
+
+    'intercept'
+    'Agriculture value added per worker (constant 2010 US$)'
+    'International tourism, expenditures (current US$)'
+    'Imports of goods and services (annual % growth)'
+    'Imports of goods and services (current US$)'
+    'Fixed broadband subscriptions (per 100 people)'
+
+    '1'    'intercept'    '98.4225'
+
+    '8'    'Agriculture value…'    '41.4564'
+
+    '19'    'International tou…'    '39.7221'
+
+    '26'    'Imports of goods …'    '125.0101'
+
+    '27'    'Imports of goods …'    '150.2964'
+
+    '36'    'Fixed broadband s…'    '44.9303'
+
+P-value Threshold: 
+   5.3490e-58
+
+Significant Indicators: 
+     1
+     6
+    28
+
+    'intercept'
+    'unemployment rate'
+    'Renewable internal freshwater resources per capita (cubic meters)'
+
+Coefficient : 
+    '1'    'intercept'    '98.4225'
+
+    '6'    'unemployment rate'    '17.6185'
+
+    '28'    'Renewable interna…'    '-39.485'
+
+p-Value : 
+    '1'    'intercept'    '0'
+
+    '6'    'unemployment rate'    '1.0678e-85'
+
+    '28'    'Renewable interna…'    '9.5968e-85'
+
+Count Error: 
+     0
+
+----------------
+>> 

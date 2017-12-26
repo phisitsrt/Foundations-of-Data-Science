@@ -1,0 +1,165 @@
+﻿>> LogiReg_SigInd_C_12_08
+file name: 
+data/data_Prep_D_C.xlsx
+For group:
+     1    11
+
+    'AA'    'DD'
+
+number of countries :
+    67
+
+    'Afghanistan'                 'AFG'
+    'Andorra'                     'AND'
+    'Aruba'                       'ABW'
+    'Australia'                   'AUS'
+    'Austria'                     'AUT'
+    'Bahrain'                     'BHR'
+    'Belgium'                     'BEL'
+    'Benin'                       'BEN'
+    'Bermuda'                     'BMU'
+    'Brunei'                      'BRN'
+    'Burkina Faso'                'BFA'
+    'Burundi'                     'BDI'
+    'Canada'                      'CAN'
+    'Central African Republic'    'CAF'
+    'Chad'                        'TCD'
+    'Congo, Dem. Rep.'            'COD'
+    'Cyprus'                      'CYP'
+    'Czech Republic'              'CZE'
+    'Denmark'                     'DNK'
+    'Eritrea'                     'ERI'
+    'Finland'                     'FIN'
+    'France'                      'FRA'
+    'Germany'                     'DEU'
+    'Greece'                      'GRC'
+    'Guinea'                      'GIN'
+    'Guinea-Bissau'               'GNB'
+    'Haiti'                       'HTI'
+    'HongKong ,China'             'HKG'
+    'Iceland'                     'ISL'
+    'Ireland'                     'IRL'
+    'Israel'                      'ISR'
+    'Italy'                       'ITA'
+    'Japan'                       'JPN'
+    'Kiribati'                    'KIR'
+    'Kuwait'                      'KWT'
+    'Liberia'                     'LBR'
+    'Luxembourg'                  'LUX'
+    'Macao ,China'                'MAC'
+    'Madagascar'                  'MDG'
+    'Malawi'                      'MWI'
+    'Mali'                        'MLI'
+    'Malta'                       'MLT'
+    'Mozambique'                  'MOZ'
+    'Netherlands'                 'NLD'
+    'New Zealand'                 'NZL'
+    'Niger'                       'NER'
+    'Norway'                      'NOR'
+    'Oman'                        'OMN'
+    'Papua New Guinea'            'PNG'
+    'Portugal'                    'PRT'
+    'Puerto Rico'                 'PRI'
+    'Qatar'                       'QAT'
+    'Saudi Arabia'                'SAU'
+    'Sierra Leone'                'SLE'
+    'Singapore'                   'SGP'
+    'Slovenia'                    'SVN'
+    'Somalia'                     'SOM'
+    'South Sudan'                 'SSD'
+    'Spain'                       'ESP'
+    'Sweden'                      'SWE'
+    'Switzerland'                 'CHE'
+    'Togo'                        'TGO'
+    'Uganda'                      'UGA'
+    'United Arab Emirates'        'ARE'
+    'United Kingdom'              'GBR'
+    'United States'               'USA'
+    'Zambia'                      'ZMB'
+
+Warning: Maximum likelihood estimation did not converge.
+Iteration limit
+exceeded.  You may need to merge categories to increase observed
+counts. 
+> In mnrfit>nominalFit (line 535)
+  In mnrfit (line 202)
+  In LogiReg_SigInd_C_12_08 (line 80) 
+Count Error: 
+     0
+
+Coefficient Threshold: 
+   61.8772
+
+Relevant variables - This high, higher probability
+     9
+    15
+    18
+    23
+    24
+
+    'Industry, value added (current US$)'
+    'Air transport, registered carrier departures worldwide'
+    'International tourism, receipts (current US$)'
+    'Exports of goods and services (annual % growth)'
+    'Exports of goods and services (current US$)'
+
+    '9'    'Industry, value a…'    '-148.8023'
+
+    '15'    'Air transport, re…'    '-223.9146'
+
+    '18'    'International tou…'    '-67.1267'
+
+    '23'    'Exports of goods …'    '-65.5001'
+
+    '24'    'Exports of goods …'    '-121.4814'
+
+Relevant variables - This low, higher probability
+     7
+    13
+    35
+    41
+
+    'Agriculture, value added (current US$)'
+    'Air transport, passengers carried'
+    'Fixed broadband subscriptions'
+    'Patent applications, nonresidents'
+
+    '7'    'Agriculture, valu…'    '205.8237'
+
+    '13'    'Air transport, pa…'    '184.7254'
+
+    '35'    'Fixed broadband s…'    '83.4019'
+
+    '41'    'Patent applicatio…'    '64.3729'
+
+P-value Threshold: 
+   6.9766e-61
+
+Significant Indicators: 
+     1
+     7
+    36
+
+    'intercept'
+    'Agriculture, value added (current US$)'
+    'Fixed broadband subscriptions (per 100 people)'
+
+Coefficient : 
+    '1'    'intercept'    '15.46'
+
+    '7'    'Agriculture, valu…'    '205.8237'
+
+    '36'    'Fixed broadband s…'    '-42.3228'
+
+p-Value : 
+    '1'    'intercept'    '2.2236e-96'
+
+    '7'    'Agriculture, valu…'    '1.5399e-62'
+
+    '36'    'Fixed broadband s…'    '1.0433e-65'
+
+Count Error: 
+     0
+
+----------------
+>> 
