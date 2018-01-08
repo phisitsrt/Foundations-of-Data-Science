@@ -1,0 +1,627 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Our World Basic Fact - TEAM OLD TRAFFORD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: rgba(140, 138, 135, 0.55);}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /*#home {background-image: url("black-and-white-lights-abstract-curves.jpg");}*/
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+    .node rect {
+        cursor: move;
+        fill-opacity: .9;
+        shape-rendering: crispEdges;
+    }
+
+    .node text {
+        pointer-events: none;
+        text-shadow: 0 1px 0 #fff;
+    }
+
+    .link {
+        fill: none;
+        stroke: #000;
+        stroke-opacity: .2;
+    }
+
+    .link:hover {
+        stroke-opacity: .5;
+    }
+</style>
+<body>
+
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center w3-dark-grey">
+        <!-- Avatar image in top left corner -->
+        <img src="download.png" style="width:100%;margin-top: 20px; margin-bottom: 10px;">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>HOME</p>
+        </a>
+        <a href="#sankey" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-area-chart w3-xxlarge"></i>
+            <p>SANKEY</p>
+        </a>
+        <a href="#map" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-map-marker w3-xxlarge"></i>
+            <p>MAP</p>
+        </a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>CONTACT US</p>
+        </a>
+    </nav>
+
+    <div class="w3-padding-large" id="main">
+        <!-- Header/Home -->
+        <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+            <h1 class="w3-jumbo">Our World Basic Fact</h1>
+            <p>OLD TRAFFORD</p>
+            <img src="download.png" alt="boy" class="w3-image" width="58%">
+        </header>
+
+
+        <!-- Sankey -->
+        <div class="w3-content w3-justify w3-text-black w3-padding-64" id="sankey">
+            <h2 class="w3-text-black">Sankey</h2>
+            <hr style="width:200px;">
+            <p id="chart"></p>
+        </div>
+
+        <!-- Map -->
+        <div class="w3-content w3-justify w3-text-black w3-padding-16" id="map" style="height: 800px;">
+            <h2 class="w3-text-black">Map</h2>
+            <hr style="width:200px">
+            <div class="w3-col w3-container m8 l9" style="height: 750px;">
+                <div id="container1" style="position: relative;"></div>
+            </div>
+            <div class="w3-col w3-container m4 l3" style="height: 750px;">
+                <form action="" style="position: relative;padding-top: 150px;">
+                    <input class="w3-radio" type="radio" id="indicator1" name="indicator" value="indicator1">
+                    <label class="w3-small">Agriculture add (% of GDP)</label><br>
+                    <input class="w3-radio" type="radio" id="indicator2" name="indicator" value="indicator2">
+                    <label class="w3-small">Industry added (% of GDP)</label><br>
+                    <input class="w3-radio" type="radio" id="indicator3" name="indicator" value="indicator3">
+                    <label class="w3-small">Population</label>
+                </form>
+            </div>
+        </div>
+
+        <!-- Contact us-->
+        <div class="w3-container w3-padding-16 w3-black w3-text-grey" id="contact">
+            <h2 class="w3-text-grey">Contact Us</h2>
+            <hr style="width:200px" class="w3-opacity">
+
+            <div class="w3-section">
+                <p><i class="fa fa-male fa-fw w3-text-grey w3-large w3-margin-right"></i> Chaipichet Palotaitakerng (Leader)</p>
+                <p><i class="fa fa-female fa-fw w3-text-grey w3-large w3-margin-right"></i> Lu Yang (Deputy)</p>
+                <p><i class="fa fa-male fa-fw w3-text-grey w3-large w3-margin-right"></i> Phisit Srirattanawong </p>
+                <p><i class="fa fa-female fa-fw w3-text-grey w3-large w3-margin-right"></i> Jiachen Li</p>
+                <p><i class="fa fa-female fa-fw w3-text-grey w3-large w3-margin-right"></i> Yue Wang</p>
+
+            </div><br>
+        </div>
+
+
+
+
+
+    </div>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <!-- I recommend you host this file on your own, since this will change without warning -->
+    <script src="http://datamaps.github.io/scripts/datamaps.world.min.js?v=1"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="sankey.js"></script>
+    <script>
+        var countriesGroup = [];
+        var units = "Widgets";
+
+        var margin = { top: 10, right: 10, bottom: 10, left: 10 },
+            width = 700 - margin.left - margin.right,
+            height = 300 - margin.top - margin.bottom;
+
+        var formatNumber = d3.format(",.0f"),    // zero decimal places
+            format = function (d) { return formatNumber(d) + " " + units; },
+            color = d3.scale.category20();
+
+        // append the svg canvas to the page
+        var svg = d3.select("#chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+        // Set the sankey diagram properties
+        var sankey = d3.sankey()
+            .nodeWidth(36)
+            .nodePadding(40)
+            .size([width, height]);
+
+        var path = sankey.link();
+
+        // load the data (using the timelyportfolio csv method)
+        d3.csv("data/countries_clusters_data_01_C_01.csv", function (error, data) {
+            // prepare data
+            var temp = { "nodes": [], "links": [] };
+            var linkDetail = [];
+            var AA = { "group": "AA", "country": [] };
+            var AB = { "group": "AB", "country": [] };
+            var AC = { "group": "AC", "country": [] };
+            var AD = { "group": "AD", "country": [] };
+            var BA = { "group": "BA", "country": [] };
+            var BB = { "group": "BB", "country": [] };
+            var BC = { "group": "BC", "country": [] };
+            var BD = { "group": "BD", "country": [] };
+            var CA = { "group": "CA", "country": [] };
+            var CB = { "group": "CB", "country": [] };
+            var CC = { "group": "CC", "country": [] };
+            var CD = { "group": "CD", "country": [] };
+            var DA = { "group": "DA", "country": [] };
+            var DB = { "group": "DB", "country": [] };
+            var DC = { "group": "DC", "country": [] };
+            var DD = { "group": "DD", "country": [] };
+
+            var transitionCount = new Array(16).fill(0);
+
+            data.forEach(function (d) {
+                var temp = { "name": d.Country, "code": d.Country_Code };
+                if (d.Transition_Types == "AA") {
+                    transitionCount[0] = transitionCount[0] + 1;
+                    AA.country.push(temp);
+                }
+                else if (d.Transition_Types == "AB") {
+                    transitionCount[1] = transitionCount[1] + 1;
+                    AB.country.push(temp);
+                }
+                else if (d.Transition_Types == "AC") {
+                    transitionCount[2] = transitionCount[2] + 1;
+                    AC.country.push(temp);
+                }
+                else if (d.Transition_Types == "AD") {
+                    transitionCount[3] = transitionCount[3] + 1;
+                    AD.country.push(temp);
+                }
+                else if (d.Transition_Types == "BA") {
+                    transitionCount[4] = transitionCount[4] + 1;
+                    BA.country.push(temp);
+                }
+                else if (d.Transition_Types == "BB") {
+                    transitionCount[5] = transitionCount[5] + 1;
+                    BB.country.push(temp);
+                }
+                else if (d.Transition_Types == "BC") {
+                    transitionCount[6] = transitionCount[6] + 1;
+                    BC.country.push(temp);
+                }
+                else if (d.Transition_Types == "BD") {
+                    transitionCount[7] = transitionCount[7] + 1;
+                    BD.country.push(temp);
+                }
+                else if (d.Transition_Types == "CA") {
+                    transitionCount[8] = transitionCount[8] + 1;
+                    CA.country.push(temp);
+                }
+                else if (d.Transition_Types == "CB") {
+                    transitionCount[9] = transitionCount[9] + 1;
+                    CB.country.push(temp);
+                }
+                else if (d.Transition_Types == "CC") {
+                    transitionCount[10] = transitionCount[10] + 1;
+                    CC.country.push(temp);
+                }
+                else if (d.Transition_Types == "CD") {
+                    transitionCount[11] = transitionCount[11] + 1;
+                    CD.country.push(temp);
+                }
+                else if (d.Transition_Types == "DA") {
+                    transitionCount[12] = transitionCount[12] + 1;
+                    DA.country.push(temp);
+                }
+                else if (d.Transition_Types == "DB") {
+                    transitionCount[13] = transitionCount[13] + 1;
+                    DB.country.push(temp);
+                }
+                else if (d.Transition_Types == "DC") {
+                    transitionCount[14] = transitionCount[14] + 1;
+                    DC.country.push(temp);
+                }
+                else if (d.Transition_Types == "DD") {
+                    transitionCount[15] = transitionCount[15] + 1;
+                    DD.country.push(temp);
+                }
+            });
+
+            //var countriesGroup = { AA, AB, AC, AD, BA, BB, BC, BD, CA, CB, CC, CD, DA, DB, DC, DD };
+
+            countriesGroup.push(AA);
+            countriesGroup.push(AB);
+            countriesGroup.push(AC);
+            countriesGroup.push(AD);
+            countriesGroup.push(BA);
+            countriesGroup.push(BB);
+            countriesGroup.push(BC);
+            countriesGroup.push(BD);
+            countriesGroup.push(CA);
+            countriesGroup.push(CB);
+            countriesGroup.push(CC);
+            countriesGroup.push(CD);
+            countriesGroup.push(DA);
+            countriesGroup.push(DB);
+            countriesGroup.push(DC);
+            countriesGroup.push(DD);
+
+
+            var links = [{ "source": "A90", "target": "A15", "value": transitionCount[0] },
+            { "source": "A90", "target": "B15", "value": transitionCount[1] },
+            { "source": "A90", "target": "C15", "value": transitionCount[2] },
+            { "source": "A90", "target": "D15", "value": transitionCount[3] },
+            { "source": "B90", "target": "A15", "value": transitionCount[4] },
+            { "source": "B90", "target": "B15", "value": transitionCount[5] },
+            { "source": "B90", "target": "C15", "value": transitionCount[6] },
+            { "source": "B90", "target": "D15", "value": transitionCount[7] },
+            { "source": "C90", "target": "A15", "value": transitionCount[8] },
+            { "source": "C90", "target": "B15", "value": transitionCount[9] },
+            { "source": "C90", "target": "C15", "value": transitionCount[10] },
+            { "source": "C90", "target": "D15", "value": transitionCount[11] },
+            { "source": "D90", "target": "A15", "value": transitionCount[12] },
+            { "source": "D90", "target": "B15", "value": transitionCount[13] },
+            { "source": "D90", "target": "C15", "value": transitionCount[14] },
+            { "source": "D90", "target": "D15", "value": transitionCount[15] }];
+
+            var source = [{ "name": "A90" }, { "name": "B90" }, { "name": "C90" }, { "name": "D90" }];
+            var target = [{ "name": "A15" }, { "name": "B15" }, { "name": "C15" }, { "name": "D15" }];
+            var nodes = source.concat(target);
+
+            nodes.forEach(function (d) {
+                temp.nodes.push(d);
+            });
+            links.forEach(function (d) {
+                if (d.value)
+                    temp.links.push(d);
+            });
+
+            //set up graph in same style as original example but empty
+            /*graph = { "nodes": [], "links": [] };
+
+            data.forEach(function (d) {
+                graph.nodes.push({ "name": d.source });
+                graph.nodes.push({ "name": d.target });
+                graph.links.push({
+                    "source": d.source,
+                    "target": d.target,
+                    "value": +d.value
+                });
+            });
+
+            console.log(graph);*/
+            graph = temp;
+
+            // return only the distinct / unique nodes
+            graph.nodes = d3.keys(d3.nest()
+                .key(function (d) { return d.name; })
+                .map(graph.nodes));
+
+            // loop through each link replacing the text with its index from node
+            graph.links.forEach(function (d, i) {
+                graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+                graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+            });
+
+            //now loop through each nodes to make nodes an array of objects
+            // rather than an array of strings
+            graph.nodes.forEach(function (d, i) {
+                graph.nodes[i] = { "name": d };
+            });
+
+            sankey
+                .nodes(graph.nodes)
+                .links(graph.links)
+                .layout(32);
+
+            // add in the links
+            var link = svg.append("g").selectAll(".link")
+                .data(graph.links)
+                .enter().append("path")
+                .attr("class", "link")
+                .attr("d", path)
+                .style("stroke-width", function (d) { return Math.max(1, d.dy); })
+                .style("stroke", function (d) {
+                    return d.color = "#ff0000";
+                })
+                .sort(function (a, b) { return b.dy - a.dy; });
+
+            // add the link titles
+            /*link.append("title")
+                .text(function (d) {
+                    return d.source.name + " → " +
+                        d.target.name + "\n" + format(d.value);
+                });*/
+            link.append("title")
+                .text(function (d) {
+                    var returnStr = "";
+                    countriesGroup.forEach(function (dd) {
+                        if (d.source.name.substring(0, 1) + d.target.name.substring(0, 1) == dd.group) {
+                            dd.country.forEach(function (ddd) {
+                                returnStr += ddd.name + "\n";
+                            })
+                        }
+                    })
+                    return returnStr + "\n" + format(d.value);
+                    /*return d.source.name + " → " +
+                        d.target.name + "\n" + format(d.value);*/
+                });
+            
+            link.forEach(function (d) {
+                d.forEach(function (dd) {
+                    dd.id = dd.__data__.source.name.substring(0, 1) + dd.__data__.target.name.substring(0, 1);
+                })
+            })
+
+            // add in the nodes
+            var node = svg.append("g").selectAll(".node")
+                .data(graph.nodes)
+                .enter().append("g")
+                .attr("class", "node")
+                .attr("transform", function (d) {
+                    return "translate(" + d.x + "," + d.y + ")";
+                })
+                .call(d3.behavior.drag()
+                    .origin(function (d) { return d; })
+                    .on("dragstart", function () {
+                        this.parentNode.appendChild(this);
+                    })
+                    .on("drag", dragmove));
+
+            // add the rectangles for the nodes
+            node.append("rect")
+                .attr("height", function (d) { return d.dy; })
+                .attr("width", sankey.nodeWidth())
+                .style("fill", function (d) {
+                    var nodeColor = "#000066";
+                    if (d.name[0] == "B") {
+                        nodeColor = "#003cb3";
+                    }
+                    else if (d.name[0] == "C") {
+                        nodeColor = "#6666ff";
+                    }
+                    else if (d.name[0] == "D") {
+                        nodeColor = "#b3b3ff";
+                    }
+                    return d.color = nodeColor;
+                    //return d.color = color(d.name.replace(/ .*/, ""));
+                })
+                .style("stroke", function (d) {
+                    return d3.rgb(d.color).darker(2);
+                })
+                .append("title")
+                .text(function (d) {
+                    return d.name + "\n" + format(d.value);
+                });
+
+            // add in the title for the nodes
+            node.append("text")
+                .attr("x", -6)
+                .attr("y", function (d) { return d.dy / 2; })
+                .attr("dy", ".35em")
+                .attr("text-anchor", "end")
+                .attr("transform", null)
+                .text(function (d) { return d.name; })
+                .filter(function (d) { return d.x < width / 2; })
+                .attr("x", 6 + sankey.nodeWidth())
+                .attr("text-anchor", "start");
+
+            // the function for moving the nodes
+            function dragmove(d) {
+                d3.select(this).attr("transform",
+                    "translate(" + d.x + "," + (
+                        d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+                    ) + ")");
+                sankey.relayout();
+                link.attr("d", path);
+            }
+        });
+
+        /*--------------------------------------------------------------------------------------------*/
+
+        var CSVdata = null;
+        //basic map config with custom fills, mercator projection
+        var map = new Datamap({
+            scope: 'world',
+            element: document.getElementById('container1'),
+            projection: 'mercator',
+            height: 740,
+            fills: {
+                defaultFill: 'white',
+            },
+
+            data: {
+                /*USA: { fillKey: 'lt50' },
+                RUS: { fillKey: 'lt50' },
+                CAN: { fillKey: 'lt50' },
+                BRA: { fillKey: 'gt50' },
+                ARG: { fillKey: 'gt50' },
+                COL: { fillKey: 'gt50' },
+                AUS: { fillKey: 'gt50' },
+                ZAF: { fillKey: 'gt50' },
+                MAD: { fillKey: 'gt50' },
+                THA: { fillKey: 'lt30' }*/
+            },
+            geographyConfig: {
+                dataUrl: null, // If not null, datamaps will fetch the map JSON (currently only supports topojson)
+                hideAntarctica: true,
+                hideHawaiiAndAlaska: false,
+                borderWidth: 2,
+                borderOpacity: 1,
+                borderColor: 'black',
+                popupTemplate: function (geography, data) { // This function should just return a string
+                    return '<div class="hoverinfo"><strong>' + geography.properties.name + '</strong></div>';
+                },
+                popupOnHover: true, // True to show the popup while hovering
+                highlightOnHover: true,
+                highlightFillColor: '#999999',
+                highlightBorderColor: 'black',
+                highlightBorderWidth: 2,
+                highlightBorderOpacity: 1
+            },
+        })
+
+
+        //sample of the arc plugin
+        /*map.arc([
+            {
+                origin: {
+                    latitude: 40.639722,
+                    longitude: 73.778889
+                },
+                destination: {
+                    latitude: 37.618889,
+                    longitude: -122.375
+                }
+            },
+            {
+                origin: {
+                    latitude: 30.194444,
+                    longitude: -97.67
+                },
+                destination: {
+                    latitude: 25.793333,
+                    longitude: -0.290556
+                }
+            }
+        ], { strokeWidth: 2 });*/
+
+
+        //bubbles, custom popup on hover template
+        /*map.bubbles([
+            { name: 'Hot', latitude: 21.32, longitude: 5.32, radius: 10, fillKey: 'gt50' },
+            { name: 'Chilly', latitude: -25.32, longitude: 120.32, radius: 18, fillKey: 'lt50' },
+            { name: 'Hot again', latitude: 21.32, longitude: -84.32, radius: 8, fillKey: 'gt50' },
+
+        ], {
+                popupTemplate: function (geo, data) {
+                    return "<div class='hoverinfo'>It is " + data.name + "</div>";
+                }
+            });*/
+
+        $(document).ready(function () {
+            $("#indicator1").click(function () {
+                var data = {};
+                var indicatorName = "agriculture add(%gdp)";
+                setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+            })
+
+            $("#indicator2").click(function () {
+                var data = {};
+                var indicatorName = "Industry, value added (% of GDP)";
+                setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+            })
+
+            $("#indicator3").click(function () {
+                var data = {};
+                var indicatorName = "population";
+                setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+            })
+
+            $(".link").mouseover(function () {
+                var id = this.id;
+                var countryList = [];
+                countriesGroup.forEach(function (d) {
+                    if (id == d.group) {
+                        d.country.forEach(function (dd) {
+                            countryList.push(dd.code);
+                        })
+                        setMapColorByCountry(countryList);
+                    }
+                })
+            })
+        })
+
+        d3.csv("data/data_Prep_D_C.csv", function (error, data) {
+            CSVdata = data;
+        });
+
+        function getMaxValue(data, indicator) {
+            var max = 0;
+            data.forEach(function (d) {
+                if (parseFloat(d[indicator]) > max) {
+                    max = parseFloat(d[indicator]);
+                }
+            })
+            return max;
+        }
+
+        function getMeanValue(data, indicator) {
+            var mean = 0;
+            var count = 0;
+            var total = 0;
+            data.forEach(function (d) {
+                total += parseFloat(d[indicator]);
+                count++;
+            })
+            mean = total / count;
+            return mean;
+        }
+
+        function setMapColor(mapdata, indicator, mean) {
+            var data = {};
+
+            mapdata.forEach(function (d) {
+                var country = d["Country code"];
+                if (parseFloat(d[indicator]) / mean > 1.50) {
+                    data[country] = "#00004d";
+                }
+                else if (parseFloat(d[indicator]) / mean > 1.25) {
+                    data[country] = "#0000cc";
+                }
+                else if (parseFloat(d[indicator]) / mean > 1.00) {
+                    data[country] = "#3333ff";
+                }
+                else if (parseFloat(d[indicator]) / mean > 0.75) {
+                    data[country] = "#8080ff";
+                }
+                else {
+                    data[country] = "#ccccff";
+                }
+            })
+            map.updateChoropleth(data);
+        }
+
+        function setMapColorByCountry(countryList) {
+            var data = {};
+
+            /*countryList.forEach(function (d) {
+                var country = d;
+                data[country] = "#00004d";
+            })*/
+
+            CSVdata.forEach(function (d) {
+                var country = d["Country code"];
+                data[country] = "#FFFFFF";
+            })
+
+            countryList.forEach(function (d) {
+                var country = d;
+                data[country] = "#00004d";
+            })
+
+            map.updateChoropleth(data);
+        }
+
+    </script>
+
+
+
+</body>
