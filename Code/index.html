@@ -1,7 +1,35 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <meta charset="utf-8">
-<title>SANKEY Experiment</title>
+<title>Our World Basic Fact - TEAM OLD TRAFFORD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .w3-row-padding img {
+        margin-bottom: 12px
+    }
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {
+        width: 120px;
+        background: rgba(140, 138, 135, 0.55);
+    }
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {
+        margin-left: 120px
+    }
+    /*#home {background-image: url("black-and-white-lights-abstract-curves.jpg");}*/
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {
+        #main {
+            margin-left: 0
+        }
+    }
+
     .node rect {
         cursor: move;
         fill-opacity: .9;
@@ -18,15 +46,187 @@
         stroke: #000;
         stroke-opacity: .2;
     }
-    
-    .link:hover {
+
+        .link:hover {
+            stroke: #33cc33 !important;
+            stroke-opacity: .5;
+        }
+
+    #AA:hover {
+        stroke: #ffff00 !important;
+        stroke-opacity: .5;
+    }
+    #BB:hover {
+        stroke: #ffff00 !important;
+        stroke-opacity: .5;
+    }
+    #CC:hover {
+        stroke: #ffff00 !important;
+        stroke-opacity: .5;
+    }
+    #DD:hover {
+        stroke: #ffff00 !important;
+        stroke-opacity: .5;
+    }
+
+    #AB:hover {
+        stroke: #f00 !important;
+        stroke-opacity: .5;
+    }
+    #AC:hover {
+        stroke: #f00 !important;
+        stroke-opacity: .5;
+    }
+    #AD:hover {
+        stroke: #f00 !important;
+        stroke-opacity: .5;
+    }
+    #BC:hover {
+        stroke: #f00 !important;
+        stroke-opacity: .5;
+    }
+    #BD:hover {
+        stroke: #f00 !important;
+        stroke-opacity: .5;
+    }
+    #CD:hover {
+        stroke: #f00 !important;
         stroke-opacity: .5;
     }
 </style>
 <body>
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center w3-dark-grey">
+        <!-- Avatar image in top left corner -->
+        <img src="download.png" style="width:100%;margin-top: 20px; margin-bottom: 10px;">
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>HOME</p>
+        </a>
+        <a href="#clustering" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-cogs w3-xxlarge"></i>
+            <p>Clustering</p>
+        </a>
+        <a href="#sankey" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-area-chart w3-xxlarge"></i>
+            <p>SANKEY</p>
+        </a>
+        <a href="#map" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-map-marker w3-xxlarge"></i>
+            <p>MAP</p>
+        </a>
+        <a href="#further" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-bar-chart w3-xxlarge"></i>
+            <p>Further Investigation</p>
+        </a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>CONTACT US</p>
+        </a>
+    </nav>
 
-    <p id="chart"></p>
-    <div id="container1" style="position: relative; width: 70%; max-height: 450px;"></div>
+    <div class="w3-padding-large" id="main">
+        <!-- Header/Home -->
+        <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+            <h1 class="w3-jumbo">Our World Basic Fact</h1>
+            <p>OLD TRAFFORD</p>
+            <img src="download.png" alt="boy" class="w3-image" width="58%">
+        </header>
+
+        <!-- Power BI 1 -->
+        <div class="w3-row w3-padding-32">
+            <div class="w3-container w3-col" style="width:5%"></div>
+            <div class="w3-container w3-col" style="width:90%"  id="clustering">
+                <center>
+                    <h2 class="w3-text-black">Clustering</h2>
+                    <hr style="width:200px;">
+                    <iframe width="1200" height="700" src="https://app.powerbi.com/view?r=eyJrIjoiZTMzNGY3YzAtZWIxNC00MGM0LTg0ZTMtMTQ2NmU4MTFiZWNkIiwidCI6IjRhNTM3OGY5LTI5ZjQtNGQzZS1iZTg5LTY2OWQwM2FkYTlkOCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+                </center>
+            </div>
+            <div class="w3-container w3-col" style="width:5%"></div>
+        </div>
+
+        <!-- Sankey -->
+        <div class="w3-row w3-padding-32">
+            <div class="w3-container w3-col" style="width:10%"></div>
+            <div class="w3-container w3-col" style="width:80%"  id="sankey">
+                <center>
+                    <h2 class="w3-text-black">Sankey</h2>
+                    <hr style="width:200px;">
+                    <p id="chart"></p>
+                </center>
+            </div>
+            <div class="w3-container w3-col" style="width:10%"></div>
+        </div>
+
+        <!-- Map -->
+        <div class="w3-row w3-padding-16">
+            <div class="w3-container w3-col" style="width:10%"></div>
+            <div class="w3-container w3-col" style="width:80%" id="map">
+                <center>
+                    <h2 class="w3-text-black">Map</h2>
+                    <hr style="width:200px;">
+                </center>
+            </div>
+            <div class="w3-container w3-col" style="width:10%"></div>
+        </div>
+
+        <div class="w3-row w3-padding-16">
+            <div class="w3-container w3-col" style="width:10%"></div>
+            <div class="w3-container w3-col" style="width:80%">
+                <center>
+                    <div class="w3-col w3-container m8 l9" style="height: 750px;">
+                        <div id="container1" style="position: relative;"></div>
+                    </div>
+                    <div class="w3-col w3-container m4 l3" style="height: 750px;">
+                        <form action="" style="position: relative;padding-top: 150px;">
+                            <input class="w3-radio" type="radio" id="indicator1" name="indicator" value="indicator1">
+                            <label class="w3-small">Agriculture add (% of GDP)</label><br>
+                            <input class="w3-radio" type="radio" id="indicator2" name="indicator" value="indicator2">
+                            <label class="w3-small">Industry added (% of GDP)</label><br>
+                            <input class="w3-radio" type="radio" id="indicator3" name="indicator" value="indicator3">
+                            <label class="w3-small">Population</label>
+                        </form>
+                    </div>
+                </center>
+            </div>
+            <div class="w3-container w3-col" style="width:10%"></div>
+        </div>
+
+        <!-- Power BI 2 -->
+        <div class="w3-row w3-padding-32">
+            <div class="w3-container w3-col" style="width:5%"></div>
+            <div class="w3-container w3-col" style="width:90%"  id="further">
+                <center>
+                    <h2 class="w3-text-black">Further Investigation</h2>
+                    <hr style="width:200px;">
+                    <iframe width="1200" height="700" src="https://app.powerbi.com/view?r=eyJrIjoiZWIzMGI1NDgtMmFlYi00OTliLWFjMmUtNDNjYmM5MTAxYzIxIiwidCI6IjRhNTM3OGY5LTI5ZjQtNGQzZS1iZTg5LTY2OWQwM2FkYTlkOCIsImMiOjh9" frameborder="0" allowFullScreen="true"></iframe>
+                </center>
+            </div>
+            <div class="w3-container w3-col" style="width:5%"></div>
+        </div>
+
+        <!-- Contact us-->
+        <div class="w3-container w3-padding-16 w3-black w3-text-grey" id="contact">
+            <h2 class="w3-text-grey">Contact Us</h2>
+            <hr style="width:200px" class="w3-opacity">
+
+            <div class="w3-section">
+                <p><i class="fa fa-male fa-fw w3-text-grey w3-large w3-margin-right"></i> Chaipichet Palotaitakerng (Leader)</p>
+                <p><i class="fa fa-female fa-fw w3-text-grey w3-large w3-margin-right"></i> Lu Yang (Deputy)</p>
+                <p><i class="fa fa-male fa-fw w3-text-grey w3-large w3-margin-right"></i> Phisit Srirattanawong </p>
+                <p><i class="fa fa-female fa-fw w3-text-grey w3-large w3-margin-right"></i> Jiachen Li</p>
+                <p><i class="fa fa-female fa-fw w3-text-grey w3-large w3-margin-right"></i> Yue Wang</p>
+
+            </div><br>
+        </div>
+
+
+
+
+        <center></center>
+
+    </div>
 
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://d3js.org/topojson.v1.min.js"></script>
@@ -36,7 +236,7 @@
     <script src="sankey.js"></script>
     <script>
         var countriesGroup = [];
-        var units = "Widgets";
+        var units = "Countries";
 
         var margin = { top: 10, right: 10, bottom: 10, left: 10 },
             width = 700 - margin.left - margin.right,
@@ -249,7 +449,7 @@
                 .attr("d", path)
                 .style("stroke-width", function (d) { return Math.max(1, d.dy); })
                 .style("stroke", function (d) {
-                    return d.color = "#ff0000";
+                    return d.color = "#808080";
                 })
                 .sort(function (a, b) { return b.dy - a.dy; });
 
@@ -273,7 +473,7 @@
                     /*return d.source.name + " → " +
                         d.target.name + "\n" + format(d.value);*/
                 });
-            
+
             link.forEach(function (d) {
                 d.forEach(function (dd) {
                     dd.id = dd.__data__.source.name.substring(0, 1) + dd.__data__.target.name.substring(0, 1);
@@ -352,7 +552,8 @@
             scope: 'world',
             element: document.getElementById('container1'),
             projection: 'mercator',
-            height: 740,
+            height: 675,
+            width: 1000,
             fills: {
                 defaultFill: 'white',
             },
@@ -430,19 +631,22 @@
             $("#indicator1").click(function () {
                 var data = {};
                 var indicatorName = "agriculture add(%gdp)";
-                setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
             })
 
             $("#indicator2").click(function () {
                 var data = {};
                 var indicatorName = "Industry, value added (% of GDP)";
-                setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
             })
 
             $("#indicator3").click(function () {
                 var data = {};
                 var indicatorName = "population";
-                setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
             })
 
             $(".link").mouseover(function () {
@@ -456,6 +660,10 @@
                         setMapColorByCountry(countryList);
                     }
                 })
+            })
+
+            $(".node").mouseover(function () {
+                console.log(this);
             })
         })
 
@@ -485,11 +693,11 @@
             return mean;
         }
 
-        function setMapColor(mapdata, indicator, mean) {
+        function setMapColor(mapdata, indicator, max) {
             var data = {};
 
             mapdata.forEach(function (d) {
-                var country = d["Country code"];
+                /*var country = d["Country code"];
                 if (parseFloat(d[indicator]) / mean > 1.50) {
                     data[country] = "#00004d";
                 }
@@ -504,7 +712,10 @@
                 }
                 else {
                     data[country] = "#ccccff";
-                }
+                }*/
+                var country = d["Country code"];
+                //data[country] = calculateColor("000000", "ffffff", parseFloat(d[indicator]) / max);
+                data[country] = shadeColor2("#00004d", 1 - (Math.log10(parseFloat(d[indicator])) / Math.log10(max)));
             })
             map.updateChoropleth(data);
         }
@@ -530,12 +741,26 @@
             map.updateChoropleth(data);
         }
 
+        function calculateColor(color1, color2, ratio) {
+            var hex = function (x) {
+                x = x.toString(16);
+                return (x.length == 1) ? '0' + x : x;
+            };
+
+            var r = Math.ceil(parseInt(color1.substring(0, 2), 16) * ratio + parseInt(color2.substring(0, 2), 16) * (1 - ratio));
+            var g = Math.ceil(parseInt(color1.substring(2, 4), 16) * ratio + parseInt(color2.substring(2, 4), 16) * (1 - ratio));
+            var b = Math.ceil(parseInt(color1.substring(4, 6), 16) * ratio + parseInt(color2.substring(4, 6), 16) * (1 - ratio));
+
+            var returnColor = hex(r) + hex(g) + hex(b);
+            return "#" + returnColor;
+        }
+
+        function shadeColor2(color, percent) {
+            var f = parseInt(color.slice(1), 16), t = percent < 0 ? 0 : 255, p = percent < 0 ? percent * -1 : percent, R = f >> 16, G = f >> 8 & 0x00FF, B = f & 0x0000FF;
+            return "#" + (0x1000000 + (Math.round((t - R) * p) + R) * 0x10000 + (Math.round((t - G) * p) + G) * 0x100 + (Math.round((t - B) * p) + B)).toString(16).slice(1);
+        }
     </script>
 
-    <form action="" style="position: fixed; right: 50px; top: 50px;">
-        <input type="radio" id="indicator1" name="indicator" value="indicator1"> agriculture add(%gdp)<br>
-        <input type="radio" id="indicator2" name="indicator" value="indicator2"> Industry, value added (% of GDP)<br>
-        <input type="radio" id="indicator3" name="indicator" value="indicator3"> population
-    </form>
+
 
 </body>
