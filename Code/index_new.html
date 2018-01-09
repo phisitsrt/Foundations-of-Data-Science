@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <meta charset="utf-8">
 <title>Our World Basic Fact - TEAM OLD TRAFFORD</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,16 +6,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Montserrat", sans-serif
+    }
 
-    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-    .w3-row-padding img {margin-bottom: 12px}
+    .w3-row-padding img {
+        margin-bottom: 12px
+    }
     /* Set the width of the sidebar to 120px */
-    .w3-sidebar {width: 120px;background: rgba(140, 138, 135, 0.55);}
+    .w3-sidebar {
+        width: 120px;
+        background: rgba(140, 138, 135, 0.55);
+    }
     /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-    #main {margin-left: 120px}
+    #main {
+        margin-left: 120px
+    }
     /*#home {background-image: url("black-and-white-lights-abstract-curves.jpg");}*/
     /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    @media only screen and (max-width: 600px) {
+        #main {
+            margin-left: 0
+        }
+    }
 
     .node rect {
         cursor: move;
@@ -34,7 +47,50 @@
         stroke-opacity: .2;
     }
 
-    .link:hover {
+        .link:hover {
+            stroke: #33cc33 !important;
+            stroke-opacity: .5;
+        }
+
+    #AA:hover {
+        stroke: #ffff00 !important;
+        stroke-opacity: .5;
+    }
+    #BB:hover {
+        stroke: #ffff00 !important;
+        stroke-opacity: .5;
+    }
+    #CC:hover {
+        stroke: #ffff00 !important;
+        stroke-opacity: .5;
+    }
+    #DD:hover {
+        stroke: #ffff00 !important;
+        stroke-opacity: .5;
+    }
+
+    #AB:hover {
+        stroke: #f00 !important;
+        stroke-opacity: .5;
+    }
+    #AC:hover {
+        stroke: #f00 !important;
+        stroke-opacity: .5;
+    }
+    #AD:hover {
+        stroke: #f00 !important;
+        stroke-opacity: .5;
+    }
+    #BC:hover {
+        stroke: #f00 !important;
+        stroke-opacity: .5;
+    }
+    #BD:hover {
+        stroke: #f00 !important;
+        stroke-opacity: .5;
+    }
+    #CD:hover {
+        stroke: #f00 !important;
         stroke-opacity: .5;
     }
 </style>
@@ -126,7 +182,7 @@
     <script src="sankey.js"></script>
     <script>
         var countriesGroup = [];
-        var units = "Widgets";
+        var units = "Countries";
 
         var margin = { top: 10, right: 10, bottom: 10, left: 10 },
             width = 700 - margin.left - margin.right,
@@ -339,7 +395,7 @@
                 .attr("d", path)
                 .style("stroke-width", function (d) { return Math.max(1, d.dy); })
                 .style("stroke", function (d) {
-                    return d.color = "#ff0000";
+                    return d.color = "#808080";
                 })
                 .sort(function (a, b) { return b.dy - a.dy; });
 
@@ -363,7 +419,7 @@
                     /*return d.source.name + " → " +
                         d.target.name + "\n" + format(d.value);*/
                 });
-            
+
             link.forEach(function (d) {
                 d.forEach(function (dd) {
                     dd.id = dd.__data__.source.name.substring(0, 1) + dd.__data__.target.name.substring(0, 1);
