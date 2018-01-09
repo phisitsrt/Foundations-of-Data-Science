@@ -178,14 +178,24 @@
                     <div class="w3-col w3-container m8 l9" style="height: 750px;">
                         <div id="container1" style="position: relative;"></div>
                     </div>
-                    <div class="w3-col w3-container m4 l3" style="height: 750px;">
+                    <div class="w3-col w3-container m4 l3" style="height: 750px;" align="left">
                         <form action="" style="position: relative;padding-top: 150px;">
                             <input class="w3-radio" type="radio" id="indicator1" name="indicator" value="indicator1">
-                            <label class="w3-small">Agriculture add (% of GDP)</label><br>
+                            <label class="w3-small">Agriculture value added per worker (constant 2010 US$)</label><br>
                             <input class="w3-radio" type="radio" id="indicator2" name="indicator" value="indicator2">
-                            <label class="w3-small">Industry added (% of GDP)</label><br>
+                            <label class="w3-small">Exports of goods and services (current US$)</label><br>
                             <input class="w3-radio" type="radio" id="indicator3" name="indicator" value="indicator3">
-                            <label class="w3-small">Population</label>
+                            <label class="w3-small">Renewable internal freshwater resources per capita (cubic meters)</label><br>
+                            <input class="w3-radio" type="radio" id="indicator4" name="indicator" value="indicator4">
+                            <label class="w3-small">Improved water source, rural (% of rural population with access)</label><br>
+                            <input class="w3-radio" type="radio" id="indicator5" name="indicator" value="indicator5">
+                            <label class="w3-small">Fixed broadband subscriptions</label><br>
+                            <input class="w3-radio" type="radio" id="indicator6" name="indicator" value="indicator6">
+                            <label class="w3-small">Individuals using the Internet (% of population)</label><br>
+                            <input class="w3-radio" type="radio" id="indicator7" name="indicator" value="indicator7">
+                            <label class="w3-small">Rail lines (total route-km)</label><br>
+                            <input class="w3-radio" type="radio" id="indicator8" name="indicator" value="indicator8">
+                            <label class="w3-small">Railways, goods transported (million ton-km)</label>
                         </form>
                     </div>
                 </center>
@@ -469,7 +479,7 @@
                             })
                         }
                     })
-                    return returnStr + "\n" + format(d.value);
+                    return format(d.value) + "\n" + returnStr;
                     /*return d.source.name + " → " +
                         d.target.name + "\n" + format(d.value);*/
                 });
@@ -518,8 +528,30 @@
                 })
                 .append("title")
                 .text(function (d) {
-                    return d.name + "\n" + format(d.value);
+                    var returnStr = "";
+                    countriesGroup.forEach(function (dd) {
+                        var group = d.name.substring(0, 1);
+                        var year = d.name.substring(1, 3);
+                        if (year == "90") {
+                            if (dd.group.substring(0, 1) == group) {
+                                dd.country.forEach(function (ddd) {
+                                    returnStr += ddd.name + "\n";
+                                })
+                            }
+                        }
+                        else if (year == "15") {
+                            if (dd.group.substring(1, 2) == group) {
+                                dd.country.forEach(function (ddd) {
+                                    returnStr += ddd.name + "\n";
+                                })
+                            }
+                        }
+                    })
+                    return format(d.value) + "\n" + returnStr;
                 });
+                /*.text(function (d) {
+                return d.name + "\n" + format(d.value);
+                });*/
 
             // add in the title for the nodes
             node.append("text")
@@ -532,6 +564,12 @@
                 .filter(function (d) { return d.x < width / 2; })
                 .attr("x", 6 + sankey.nodeWidth())
                 .attr("text-anchor", "start");
+
+            node.forEach(function (d) {
+                d.forEach(function (dd) {
+                    dd.id = dd.__data__.name;
+                })
+            })
 
             // the function for moving the nodes
             function dragmove(d) {
@@ -630,21 +668,56 @@
         $(document).ready(function () {
             $("#indicator1").click(function () {
                 var data = {};
-                var indicatorName = "agriculture add(%gdp)";
+                var indicatorName = "Agriculture value added per worker (constant 2010 US$)";
                 //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
                 setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
             })
 
             $("#indicator2").click(function () {
                 var data = {};
-                var indicatorName = "Industry, value added (% of GDP)";
+                var indicatorName = "Exports of goods and services (current US$)";
                 //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
                 setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
             })
 
             $("#indicator3").click(function () {
                 var data = {};
-                var indicatorName = "population";
+                var indicatorName = "Renewable internal freshwater resources per capita (cubic meters)";
+                //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
+            })
+
+            $("#indicator4").click(function () {
+                var data = {};
+                var indicatorName = "Improved water source, rural (% of rural population with access)";
+                //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
+            })
+
+            $("#indicator5").click(function () {
+                var data = {};
+                var indicatorName = "Fixed broadband subscriptions";
+                //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
+            })
+
+            $("#indicator6").click(function () {
+                var data = {};
+                var indicatorName = "Individuals using the Internet (% of population)";
+                //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
+            })
+
+            $("#indicator7").click(function () {
+                var data = {};
+                var indicatorName = "Rail lines (total route-km)";
+                //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
+                setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
+            })
+
+            $("#indicator8").click(function () {
+                var data = {};
+                var indicatorName = "Railways, goods transported (million ton-km)";
                 //setMapColor(CSVdata, indicatorName, getMeanValue(CSVdata, indicatorName));
                 setMapColor(CSVdata, indicatorName, getMaxValue(CSVdata, indicatorName));
             })
@@ -660,10 +733,6 @@
                         setMapColorByCountry(countryList);
                     }
                 })
-            })
-
-            $(".node").mouseover(function () {
-                console.log(this);
             })
         })
 
@@ -714,8 +783,13 @@
                     data[country] = "#ccccff";
                 }*/
                 var country = d["Country code"];
-                //data[country] = calculateColor("000000", "ffffff", parseFloat(d[indicator]) / max);
-                data[country] = shadeColor2("#00004d", 1 - (Math.log10(parseFloat(d[indicator])) / Math.log10(max)));
+                if (parseFloat(d[indicator]) > 0) {
+                    //data[country] = calculateColor("000000", "FFFFFF", Math.log10(parseFloat(d[indicator])) / Math.log10(max));
+                    data[country] = shadeColor2("#00004d", 1 - (Math.log10(parseFloat(d[indicator])) / Math.log10(max)));
+                }
+                else {
+                    data[country] = "#FFFFFF";
+                }
             })
             map.updateChoropleth(data);
         }
