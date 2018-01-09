@@ -147,13 +147,13 @@
         </div>
 
         <!-- Sankey -->
-        <div class="w3-row w3-padding-32">
+        <div class="w3-row w3-padding-16">
             <div class="w3-container w3-col" style="width:10%"></div>
             <div class="w3-container w3-col" style="width:80%"  id="sankey">
                 <center>
                     <h2 class="w3-text-black">Sankey</h2>
                     <hr style="width:200px;">
-                    <p id="chart"></p>
+                    <p id="chart" class="w3-topbar w3-bottombar w3-leftbar w3-rightbar"></p>
                 </center>
             </div>
             <div class="w3-container w3-col" style="width:10%"></div>
@@ -171,14 +171,14 @@
             <div class="w3-container w3-col" style="width:10%"></div>
         </div>
 
-        <div class="w3-row w3-padding-16">
+        <div class="w3-row">
             <div class="w3-container w3-col" style="width:10%"></div>
             <div class="w3-container w3-col" style="width:80%">
                 <center>
-                    <div class="w3-col w3-container m8 l9" style="height: 750px;">
+                    <div class="w3-col w3-container m8 l9 w3-topbar w3-bottombar w3-leftbar w3-rightbar" style="height: 650px;">
                         <div id="container1" style="position: relative;"></div>
                     </div>
-                    <div class="w3-col w3-container m4 l3" style="height: 750px;" align="left">
+                    <div class="w3-col w3-container m4 l3 " style="height: 750px;" align="left">
                         <form action="" style="position: relative;padding-top: 150px;">
                             <input class="w3-radio" type="radio" id="indicator1" name="indicator" value="indicator1">
                             <label class="w3-small">Agriculture value added per worker (constant 2010 US$)</label><br>
@@ -590,8 +590,8 @@
             scope: 'world',
             element: document.getElementById('container1'),
             projection: 'mercator',
-            height: 675,
-            width: 1000,
+            height: 650,
+            width: 950,
             fills: {
                 defaultFill: 'white',
             },
@@ -809,7 +809,7 @@
 
             countryList.forEach(function (d) {
                 var country = d;
-                data[country] = "#00004d";
+                data[country] = "#9999ff";
             })
 
             map.updateChoropleth(data);
