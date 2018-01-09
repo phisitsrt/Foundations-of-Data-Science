@@ -783,7 +783,7 @@
                     data[country] = "#ccccff";
                 }*/
                 var country = d["Country code"];
-                if (parseFloat(d[indicator]) > 0) {
+                if (parseFloat(d[indicator]) > 1) {
                     //data[country] = calculateColor("000000", "FFFFFF", Math.log10(parseFloat(d[indicator])) / Math.log10(max));
                     data[country] = shadeColor2("#00004d", 1 - (Math.log10(parseFloat(d[indicator])) / Math.log10(max)));
                 }
