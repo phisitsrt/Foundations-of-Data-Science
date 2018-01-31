@@ -1,0 +1,32 @@
+﻿
+
+Cluster:
+BA
+
+Significant Indicator
+:
+Agriculture value added per worker (constant 2010 US$)
+Exports of goods and services (current US$)
+Renewable internal freshwater resources per capita (cubic meters)
+Improved water source, rural (% of rural population with access)
+Fixed broadband subscriptions
+Individuals using the Internet (% of population)
+Rail lines (total route-km)	
+Railways, goods transported (million ton-km)
+
+1st model, 
+AIC: 106.0002
+
+2nd model, 
+AIC: 42.20031
+
+Reduced model's 
+Significant Indicator
+:
+Individuals using the Internet (% of population)
+Rail lines (total route-km)
+
+
+
+
+
